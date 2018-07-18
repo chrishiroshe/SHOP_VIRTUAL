@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="customer_list">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>customer_list</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>customer_id</Input>
+        <Input>list_type_id</Input>
+        <Input>list_name</Input>
+        <Input>created_date</Input>
+        <Input>active</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>customer_list</Table>
+      <Inputs>
+        <Input>customer_id</Input>
+        <Input>list_type_id</Input>
+        <Input>list_name</Input>
+        <Input>created_date</Input>
+        <Input>active</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>customer_list</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>customer_id</Input>
+        <Input>list_type_id</Input>
+        <Input>list_name</Input>
+        <Input>created_date</Input>
+        <Input>active</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>customer_list</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+  </Storable>
+</Objects>

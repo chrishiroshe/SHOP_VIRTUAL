@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="order_payment_billed">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>order_payment_billed</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>order_payment_id</Input>
+        <Input>expiration_date</Input>
+        <Input>payment_value</Input>
+        <Input>active</Input>
+        <Input>created_date</Input>
+        <Input>typeful_line</Input>
+        <Input>billed_type</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>order_payment_billed</Table>
+      <Inputs>
+        <Input>order_payment_id</Input>
+        <Input>expiration_date</Input>
+        <Input>payment_value</Input>
+        <Input>active</Input>
+        <Input>created_date</Input>
+        <Input>typeful_line</Input>
+        <Input>billed_type</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>order_payment_billed</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>order_payment_id</Input>
+        <Input>expiration_date</Input>
+        <Input>payment_value</Input>
+        <Input>active</Input>
+        <Input>created_date</Input>
+        <Input>typeful_line</Input>
+        <Input>billed_type</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>order_payment_billed</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+  </Storable>
+</Objects>

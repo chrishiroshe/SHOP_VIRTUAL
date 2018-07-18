@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="store_click_price">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>store_click_price</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>store_id</Input>
+        <Input>created_date</Input>
+        <Input>active</Input>
+        <Input>price</Input>
+        <Input>price_type</Input>
+        <Input>inactivated_date</Input>
+        <Input>value_type_id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>store_click_price</Table>
+      <Inputs>
+        <Input>store_id</Input>
+        <Input>created_date</Input>
+        <Input>active</Input>
+        <Input>price</Input>
+        <Input>price_type</Input>
+        <Input>inactivated_date</Input>
+        <Input>value_type_id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>store_click_price</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>store_id</Input>
+        <Input>created_date</Input>
+        <Input>active</Input>
+        <Input>price</Input>
+        <Input>price_type</Input>
+        <Input>inactivated_date</Input>
+        <Input>value_type_id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>store_click_price</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+  </Storable>
+</Objects>

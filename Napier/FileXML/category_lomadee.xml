@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="category_lomadee">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>category_lomadee</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>parentCategoryId</Input>
+        <Input>name</Input>
+        <Input>processed</Input>
+        <Input>isFinal</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>category_lomadee</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>parentCategoryId</Input>
+        <Input>name</Input>
+        <Input>processed</Input>
+        <Input>isFinal</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>category_lomadee</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>parentCategoryId</Input>
+        <Input>name</Input>
+        <Input>processed</Input>
+        <Input>isFinal</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>category_lomadee</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="PD_CATEGORIES_LOMADEE">
+      <Summary>Update and Retrieve products</Summary>
+      <Proc>pd_categories_lomadee</Proc>
+    </Execution>
+    
+  </Storable>
+</Objects>

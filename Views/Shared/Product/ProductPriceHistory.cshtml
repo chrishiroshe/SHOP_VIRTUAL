@@ -1,0 +1,35 @@
+﻿@model SV.Site.Facade.SearchEntities.SearchProductEntity
+<h3 class="title">Histórico de Preços (R$)</h3>
+<section class="product-historico-precos row">
+    <section class="col-sm-8">
+        <div style="width: 100%">
+            <canvas id="grafico-historico-precos" height="80px" style="width: 100%"></canvas>
+        </div>
+    </section>
+    <aside class="alerta-preco col-sm-4">
+        <div class="panel panel-default box-model">
+            <div class="panel-heading">
+                <h5 class="panel-title">
+                    Quero um preço menor:
+                </h5>
+            </div>
+            <nav class="panel-body">
+                <div class="alerta-preco-content">
+                    <h4 class="subtitle menor-preco">
+                        Menor Preço: <span>R$ 4500,00</span>
+                    </h4>
+                    <label class="subtitle" for="preco-alerta">
+                        Quero pagar até (R$):
+                    </label>
+                    <input type="text" class="form-control input" id="preco-alerta" placeholder="Até quanto deseja pagar?">
+                    <div class="alerta-action clearfix">
+                        <a class="btn btn-success no-border pull-right">
+                            <i class="fa fa-bell"></i>
+                            Criar Alerta
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </aside>
+</section>

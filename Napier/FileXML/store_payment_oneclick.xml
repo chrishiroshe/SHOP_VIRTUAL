@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="store_payment_oneclick">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>store_payment_oneclick</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>created_date</Input>
+        <Input>active</Input>
+        <Input>creditcard_number</Input>
+        <Input>creditcard_final_number</Input>
+        <Input>expiration_month</Input>
+        <Input>expiration_year</Input>
+        <Input>security_number</Input>
+        <Input>creditcard_type</Input>
+        <Input>creditcard_holder</Input>
+        <Input>store_id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>store_payment_oneclick</Table>
+      <Inputs>
+        <Input>created_date</Input>
+        <Input>active</Input>
+        <Input>creditcard_number</Input>
+        <Input>creditcard_final_number</Input>
+        <Input>expiration_month</Input>
+        <Input>expiration_year</Input>
+        <Input>security_number</Input>
+        <Input>creditcard_type</Input>
+        <Input>creditcard_holder</Input>
+        <Input>store_id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>store_payment_oneclick</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>created_date</Input>
+        <Input>active</Input>
+        <Input>creditcard_number</Input>
+        <Input>creditcard_final_number</Input>
+        <Input>expiration_month</Input>
+        <Input>expiration_year</Input>
+        <Input>security_number</Input>
+        <Input>creditcard_type</Input>
+        <Input>creditcard_holder</Input>
+        <Input>store_id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>store_payment_oneclick</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+  </Storable>
+</Objects>

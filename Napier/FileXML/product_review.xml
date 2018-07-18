@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="product_review">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>product_review</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>customer_id</Input>
+        <Input>product_id</Input>
+        <Input>rate</Input>
+        <Input>title</Input>
+        <Input>review</Input>
+        <Input>purchased</Input>
+        <Input>recommend</Input>
+        <Input>approved</Input>
+        <Input>active</Input>
+        <Input>created_date</Input>
+        <Input>approved_date</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>product_review</Table>
+      <Inputs>
+        <Input>customer_id</Input>
+        <Input>product_id</Input>
+        <Input>rate</Input>
+        <Input>title</Input>
+        <Input>review</Input>
+        <Input>purchased</Input>
+        <Input>recommend</Input>
+        <Input>approved</Input>
+        <Input>active</Input>
+        <Input>created_date</Input>
+        <Input>approved_date</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>product_review</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>customer_id</Input>
+        <Input>product_id</Input>
+        <Input>rate</Input>
+        <Input>title</Input>
+        <Input>review</Input>
+        <Input>purchased</Input>
+        <Input>recommend</Input>
+        <Input>approved</Input>
+        <Input>active</Input>
+        <Input>created_date</Input>
+        <Input>approved_date</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>product_review</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="PS_GET_PRODUCTS_REVIEW">
+      <Summary>Update and Retrieve products pending</Summary>
+      <Proc>ps_get_products_review</Proc>
+      <Inputs>
+        <Input>pending</Input>
+        <Input>beginDate</Input>
+        <Input>endDate</Input>
+        <Input>approved</Input>
+        <Input>itensToRetrieve</Input>
+        <Input>page</Input>
+      </Inputs>
+    </Execution>
+  </Storable>
+</Objects>

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="customer_detail">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>customer_detail</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>customer_id</Input>
+        <Input>document_number_cpf</Input>
+        <Input>document_number_rg</Input>
+        <Input>gender</Input>
+        <Input>birthday</Input>
+        <Input>avatar</Input>
+        <Input>nickname</Input>
+        <Input>maritial_status_type_id</Input>
+        <Input>phone_number</Input>
+        <Input>cellphone_number</Input>
+        <Input>workphone_number</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>customer_detail</Table>
+      <Inputs>
+        <Input>customer_id</Input>
+        <Input>document_number_cpf</Input>
+        <Input>document_number_rg</Input>
+        <Input>gender</Input>
+        <Input>birthday</Input>
+        <Input>avatar</Input>
+        <Input>nickname</Input>
+        <Input>maritial_status_type_id</Input>
+        <Input>phone_number</Input>
+        <Input>cellphone_number</Input>
+        <Input>workphone_number</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>customer_detail</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>customer_id</Input>
+        <Input>document_number_cpf</Input>
+        <Input>document_number_rg</Input>
+        <Input>gender</Input>
+        <Input>birthday</Input>
+        <Input>avatar</Input>
+        <Input>nickname</Input>
+        <Input>maritial_status_type_id</Input>
+        <Input>phone_number</Input>
+        <Input>cellphone_number</Input>
+        <Input>workphone_number</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>customer_detail</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+  </Storable>
+</Objects>

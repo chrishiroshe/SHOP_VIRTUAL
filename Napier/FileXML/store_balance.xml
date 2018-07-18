@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="store_balance">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>store_balance</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>balance</Input>
+        <Input>store_id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>store_balance</Table>
+      <Inputs>
+        <Input>balance</Input>
+        <Input>store_id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>store_balance</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>balance</Input>
+        <Input>store_id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>store_balance</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+  </Storable>
+</Objects>

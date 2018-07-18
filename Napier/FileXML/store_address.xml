@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="store_address">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>store_address</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>store_id</Input>
+        <Input>address</Input>
+        <Input>address_type</Input>
+        <Input>address_number</Input>
+        <Input>is_main_address</Input>
+        <Input>zipcode</Input>
+        <Input>city</Input>
+        <Input>state_acronym</Input>
+        <Input>neighborhood</Input>
+        <Input>address_complement</Input>
+        <Input>active</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>store_address</Table>
+      <Inputs>
+        <Input>store_id</Input>
+        <Input>address</Input>
+        <Input>address_type</Input>
+        <Input>address_number</Input>
+        <Input>is_main_address</Input>
+        <Input>zipcode</Input>
+        <Input>city</Input>
+        <Input>state_acronym</Input>
+        <Input>neighborhood</Input>
+        <Input>address_complement</Input>
+        <Input>active</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>store_address</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>store_id</Input>
+        <Input>address</Input>
+        <Input>address_type</Input>
+        <Input>address_number</Input>
+        <Input>is_main_address</Input>
+        <Input>zipcode</Input>
+        <Input>city</Input>
+        <Input>state_acronym</Input>
+        <Input>neighborhood</Input>
+        <Input>address_complement</Input>
+        <Input>active</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>store_address</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+  </Storable>
+</Objects>

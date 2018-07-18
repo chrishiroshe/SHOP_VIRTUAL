@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="category">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>category</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>name</Input>
+        <Input>active</Input>
+        <Input>parent_category_id</Input>
+        <Input>image_url</Input>
+        <Input>image_thumb_url</Input>
+        <Input>external_id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>category</Table>
+      <Inputs>
+        <Input>name</Input>
+        <Input>active</Input>
+        <Input>parent_category_id</Input>
+        <Input>image_url</Input>
+        <Input>image_thumb_url</Input>
+        <Input>external_id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>category</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>name</Input>
+        <Input>active</Input>
+        <Input>parent_category_id</Input>
+        <Input>image_url</Input>
+        <Input>image_thumb_url</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>category</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="PS_GET_CATEGORIES_BY_PRODUCT">
+      <Summary>Update and Retrieve products</Summary>
+      <Proc>ps_get_categories_by_product</Proc>
+      <Inputs>
+        <Input>product_id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="PI_CATEGORIES_LOMADEE">
+      <Summary>Update and Retrieve products</Summary>
+      <Proc>pi_categories_lomadee</Proc>
+    </Execution>
+    <Execution cod="PS_GET_MENU_CATEGORIES">
+      <Summary>Get categories menu</Summary>
+      <Proc>ps_get_menu_categories</Proc>
+    </Execution>
+    <Execution cod="PS_GET_MENU_FATHER_CATEGORIES">
+      <Summary>Get categories menu</Summary>
+      <Proc>ps_get_menu_father_categories</Proc>
+    </Execution>
+  </Storable>
+</Objects>

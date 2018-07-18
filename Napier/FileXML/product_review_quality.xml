@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="product_review_quality">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>product_review_quality</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>product_review_id</Input>
+        <Input>quality_id</Input>
+        <Input>positive</Input>
+        <Input>active</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>product_review_quality</Table>
+      <Inputs>
+        <Input>product_review_id</Input>
+        <Input>quality_id</Input>
+        <Input>positive</Input>
+        <Input>active</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>product_review_quality</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>product_review_id</Input>
+        <Input>quality_id</Input>
+        <Input>positive</Input>
+        <Input>active</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>product_review_quality</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+  </Storable>
+</Objects>

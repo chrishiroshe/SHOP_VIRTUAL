@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="backoffice_permission_group_menu">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>backoffice_permission_group_menu</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>menu_id</Input>
+        <Input>permission_group_id</Input>
+        <Input>active</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>backoffice_permission_group_menu</Table>
+      <Inputs>
+        <Input>menu_id</Input>
+        <Input>permission_group_id</Input>
+        <Input>active</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>backoffice_permission_group_menu</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>menu_id</Input>
+        <Input>permission_group_id</Input>
+        <Input>active</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <IgnoreDeleteControl>true</IgnoreDeleteControl>
+      <Table>backoffice_permission_group_menu</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="PD_DELETE_PERMISSION_GROUP_MENU">
+      <Summary>Delete products</Summary>
+      <Proc>pd_delete_permission_group_menu</Proc>
+      <Inputs>
+        <Input>permission_group_id</Input>
+      </Inputs>
+    </Execution>
+  </Storable>
+</Objects>

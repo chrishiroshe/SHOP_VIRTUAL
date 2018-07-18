@@ -1,0 +1,224 @@
+﻿@model SV.Site.UI.ViewModels.HomeViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main class="container main-container headerOffset" rel="home" id="main-container">
+    <div class="row">
+        <!--left column-->
+        <div class="col-lg-3 col-md-4 col-sm-12">
+            <aside class="panel-group" id="accordionNo">
+                <!--Categorias-->
+                <section class="panel panel-default box-model">
+                    <div class="panel-heading">
+                        <h5 class="panel-title">
+                            Economizar em:
+                        </h5>
+                    </div>
+                    <nav class="panel-body">
+                        <ul class="nav nav-pills nav-stacked tree lista-categorias">
+                            
+                            @{
+                                if (Model.fatherCategories != null && Model.fatherCategories.Count > 0)
+                                {
+                                    foreach (SV.Common.Core.CategoryModel fathercategory in Model.fatherCategories)
+                                    {
+                                          <li class="categoria">
+                                             <a class="pressed font-title" data-toggle="collapse" href='#@fathercategory.FatherMenuName'>
+                                                <span class="arrow">
+                                                      <i class="fa fa-caret-right"></i>
+                                                  </span>
+                                                  <h2 class="categoria-title" title="Compare preços de Celulares e Telefones">@fathercategory.name</h2>
+                                                
+                                                  <!--span class="badge">220</!--span-->
+                                              </a>
+                                              <ul id="@fathercategory.FatherMenuName" class="lista-marcas collapse">
+                                                  @{
+                                          var child = Model.categories.FindAll(item => item.child_parentid == fathercategory.id);
+                                          foreach (SV.Common.Core.CategoryModel childcategory in child)
+                                          {
+                                            <a href='/categoria/@String.Concat(fathercategory.FatherMenuName,"--",childcategory.ChildMenuName)'><li>@childcategory.child_name</li></a>
+                                          }
+                                            }
+                                              </ul>
+
+                                        </li>
+                                      }
+                                  //  var fathercategories = Model.categories.fi
+                                }
+                            }
+                            @*<li class="categoria">
+                                <a class="collapseWill pressed font-title" data-toggle="collapse" href="#celulares-e-telefones">
+                                    <span class="arrow">
+                                        <i class="fa fa-caret-right"></i>
+                                    </span>
+                                    <h2 class="categoria-title" title="Compare preços de Celulares e Telefones">Celulares e Telefones</h2>
+                                    <span class="badge">220</span>
+                                </a>
+                                <ul id="celulares-e-telefones" class="lista-marcas collapse">
+                                    <a><li>Samsung</li></a>
+                                    <a><li>LG</li></a>
+                                    <a><li>Motorola</li></a>
+                                    <a><li>Apple</li></a>
+                                </ul>
+                            </li>
+                            <li class="categoria">
+                                <a class="collapseWill pressed font-title" data-toggle="collapse" href="#televisores">
+                                    <span class="arrow">
+                                        <i class="fa fa-caret-right"></i>
+                                    </span>
+                                    <h2 class="categoria-title" title="Compare preços de Celulares e Telefones">Televisores</h2>
+                                    <span class="badge">180</span>
+                                </a>
+                                <ul id="televisores" class="lista-marcas collapse">
+                                    <a><li>Samsung</li></a>
+                                    <a><li>LG</li></a>
+                                    <a><li>Philips</li></a>
+                                </ul>
+                            </li>*@
+
+                        </ul>
+                    </nav>
+                </section> <!--Fim do menu de Categorias-->
+            </aside>
+        </div>
+
+        <section class="col-sm-12 col-lg-9 col-md-8 hidden-xs">
+
+            <!-- Banner -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    
+                    @if (Model.banners != null && Model.banners.Count > 0)
+                    {
+                        foreach (SV.Common.Core.BannerModel banner in Model.banners)
+                        {
+                            <a href="@banner.url_link" class="swiper-slide swiper-no-swiping" target="_blank">
+                                <img src="@banner.url" class="" alt="Shopping Virtual - Compare preços de @banner.name">
+                            </a>
+                        }
+                    }
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="clearfix"></div>
+
+            <div class="center container-arrow-banner">
+                <span id="prev" class="arrow arrow-l">
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         width="32px" height="32px" viewBox="0 0 841.889 1190.549" enable-background="new 0 0 841.889 1190.549"
+                         xml:space="preserve">
+                    <g>
+                    <path d="M217.297,609.217l458.309,374.354c11.398,9.144,16.594,5.421,11.597-8.309L565.538,617.529
+		                        c-4.994-13.729-4.946-35.981,0.104-49.691l121.454-352.521c5.052-13.71-0.139-17.473-11.597-8.405L217.404,576.24
+		                        C205.945,585.307,205.899,600.073,217.297,609.217z" />
+                        </g>
+                    </svg>
+                </span>
+                <span id="next" class="arrow arrow-r">
+                    <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         width="32px" height="32px" viewBox="0 0 841.889 1190.549" enable-background="new 0 0 841.889 1190.549"
+                         xml:space="preserve">
+                    <g>
+                    <path d="M680.478,576.24L222.381,206.911c-11.458-9.067-16.648-5.304-11.597,8.406l121.455,352.52
+		                        c5.051,13.71,5.098,35.962,0.104,49.692L210.679,975.262c-4.997,13.73,0.198,17.452,11.597,8.309l458.308-374.354
+		                        C691.983,600.073,691.937,585.307,680.478,576.24z" />
+                        </g>
+                    </svg>
+                </span>
+            </div>
+        </section>
+
+
+        <!--right column-->
+        <article class="col-sm-12 col-md-8 col-lg-9 pull-right home-produtos-container">
+            @if (Model.productsClick != null && Model.productsClick.Count > 0)
+                {
+                <section class="products-block-home">
+                    <div class="clearfix">
+                        <h2 class="title-home">Mais Visitados</h2>
+                    </div>
+                    <div class="row categoryProduct xsResponse clearfix">
+                    @foreach (SV.Common.Core.ProductModel productclick in Model.productsClick)
+                    {
+                        Html.RenderPartial("~/Views/Shared/Home/ProductItem.cshtml", productclick);
+                    }
+                    </div>
+                </section>
+            }
+            @if (Model.productsNew != null && Model.productsNew.Count > 0)
+                    {
+                <section class="products-block-home">
+                    <div class="clearfix">
+                        <h2 class="title-home">Lançamentos</h2>
+                    </div>
+                    <div class="row categoryProduct xsResponse clearfix">
+                    @foreach (SV.Common.Core.ProductModel productnew in Model.productsNew)
+                    {
+                        Html.RenderPartial("~/Views/Shared/Home/ProductItem.cshtml", productnew);
+                    }
+                    </div>
+                </section>
+            }
+            @if (Model.productsCheaper != null && Model.productsCheaper.Count > 0)
+            {
+                <section class="products-block-home">
+                    <div class="clearfix">
+                        <h2 class="title-home">Mais Baratos</h2>
+                    </div>
+                    <div class="row categoryProduct xsResponse clearfix">
+                    @foreach (SV.Common.Core.ProductModel productcheaper in Model.productsCheaper)
+                    {
+                        Html.RenderPartial("~/Views/Shared/Home/ProductItem.cshtml", productcheaper);
+                    }
+                    </div>
+                </section>
+}
+                <!--div class="w100 categoryFooter">
+                <div class="pagination pull-left no-margin-top">
+                    <ul class="pagination no-margin-top">
+                        <li><a href="#">«</a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">»</a></li>
+                    </ul>
+                </div>
+                <div class="pull-right pull-right col-sm-4 col-xs-12 no-padding text-right text-left-xs">
+                    <p>Exibindo 1–10 de 12 resultados</p>
+                </div>
+            </div--> <!--/.categoryFooter-->
+                </article><!--/right column end-->
+    </div><!-- /.row  -->
+</main>
+
+@section Scripts {
+    @*@Scripts.Render("~/bundles/index")*@
+    @* inicio remover depois para bundle *@
+    @Scripts.Render("~/Scripts/home.js")
+    @* fim remover depois para bundle *@
+
+<script type="text/javascript">
+    /* Slider Plugin - http://www.idangero.us/sliders/swiper/ */
+    $(function () {
+        var mySwiper = $('.swiper-container').swiper({
+            mode: 'horizontal',
+            loop: true,
+            autoplay: 5000,
+            autoplayDisableOnInteraction: true,
+            speed: 1000,
+            calculateHeight: true,
+            cssWidthAndHeight: true,
+            nextButton: '#next',
+            prevButton: '#prev',
+            pagination: '.swiper-pagination',
+            createPagination: true,
+            paginationClickable: true,
+            slideToClickedSlide: true
+        });
+    });
+
+</script>
+}

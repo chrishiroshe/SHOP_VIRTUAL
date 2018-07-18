@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="recurrence_type">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>recurrence_type</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>name</Input>
+        <Input>active</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>recurrence_type</Table>
+      <Inputs>
+        <Input>name</Input>
+        <Input>active</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>recurrence_type</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>name</Input>
+        <Input>active</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>recurrence_type</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+  </Storable>
+</Objects>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="store_transaction">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>store_transaction</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>ammount</Input>
+        <Input>credit</Input>
+        <Input>transaction_type_id</Input>
+        <Input>transaction_date</Input>
+        <Input>store_id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>store_transaction</Table>
+      <Inputs>
+        <Input>ammount</Input>
+        <Input>credit</Input>
+        <Input>transaction_type_id</Input>
+        <Input>transaction_date</Input>
+        <Input>store_id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>store_transaction</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>ammount</Input>
+        <Input>credit</Input>
+        <Input>transaction_type_id</Input>
+        <Input>transaction_date</Input>
+        <Input>store_id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>store_transaction</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+  </Storable>
+</Objects>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="dashboard">
+    <Execution cod="PS_GET_DASHBOARD">
+      <Summary>Update and Retrieve products pending</Summary>
+      <Proc>ps_get_dashboard</Proc>
+    </Execution>
+    <Execution cod="PS_GET_DASHBOARD_DAILY">
+      <Summary>Update and Retrieve products pending</Summary>
+      <Proc>ps_get_dashboard_daily</Proc>
+    </Execution>
+  </Storable>
+</Objects>

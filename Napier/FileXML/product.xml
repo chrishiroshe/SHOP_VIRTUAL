@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="product">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>product</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>name</Input>
+        <Input>description</Input>
+        <Input>active</Input>
+        <Input>create_date</Input>
+        <Input>manufacturer_id</Input>
+        <Input>model</Input>
+        <Input>product_lomadee_id</Input>        
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>product</Table>
+      <Inputs>
+        <Input>name</Input>
+        <Input>description</Input>
+        <Input>active</Input>
+        <Input>create_date</Input>
+        <Input>manufacturer_id</Input>
+        <Input>model</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>product</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>name</Input>
+        <Input>description</Input>
+        <Input>active</Input>
+        <Input>create_date</Input>
+        <Input>manufacturer_id</Input>
+        <Input>model</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>product</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="PS_GET_PRODUCTS">
+      <Summary>Update and Retrieve products pending</Summary>
+      <Proc>ps_get_products</Proc>
+      <Inputs>
+        <Input>active</Input>
+        <Input>manufacturerName</Input>
+        <Input>productName</Input>
+        <Input>beginDate</Input>
+        <Input>endDate</Input>
+        <Input>id</Input>
+        <Input>itensToRetrieve</Input>
+        <Input>page</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="PS_GET_PRODUCTS_TOP_CLICKS">
+      <Summary>Update and Retrieve products pending</Summary>
+      <Proc>ps_get_products_top_clicks</Proc>
+      <Inputs>
+        <Input>beginDate</Input>
+        <Input>endDate</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="PS_GET_PRODUCTS_TOP_CHEAPER">
+      <Summary>Update and Retrieve products pending</Summary>
+      <Proc>ps_get_products_top_cheaper</Proc>
+      <Inputs>
+        <Input>beginDate</Input>
+        <Input>endDate</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="PS_GET_PRODUCTS_TOP_NEW">
+      <Summary>Update and Retrieve products pending</Summary>
+      <Proc>ps_get_products_top_new</Proc>
+      <Inputs>
+        <Input>beginDate</Input>
+        <Input>endDate</Input>
+      </Inputs>
+    </Execution>    
+  </Storable>
+</Objects>

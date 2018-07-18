@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="store_pre_register">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>store_pre_register</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>name</Input>
+        <Input>store_name</Input>
+        <Input>email</Input>
+        <Input>contact_phone</Input>
+        <Input>register_date</Input>
+        <Input>is_contact</Input>
+        <Input>is_register</Input>
+        <Input>contact_date</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>store_pre_register</Table>
+      <Inputs>
+        <Input>name</Input>
+        <Input>store_name</Input>
+        <Input>email</Input>
+        <Input>contact_phone</Input>
+        <Input>register_date</Input>
+        <Input>is_contact</Input>
+        <Input>is_register</Input>
+        <Input>contact_date</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>store_pre_register</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>name</Input>
+        <Input>store_name</Input>
+        <Input>email</Input>
+        <Input>contact_phone</Input>
+        <Input>register_date</Input>
+        <Input>is_contact</Input>
+        <Input>is_register</Input>
+        <Input>contact_date</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>store_pre_register</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="PS_GET_STORE_PRE_REGISTER">
+      <Summary>Update and Retrieve products pending</Summary>
+      <Proc>PS_GET_STORE_PRE_REGISTER</Proc>
+      <Inputs>
+        <Input>iscontact</Input>
+        <Input>isregister</Input>
+        <Input>name</Input>
+        <Input>beginDate</Input>
+        <Input>endDate</Input>
+        <Input>id</Input>
+        <Input>itensToRetrieve</Input>
+        <Input>page</Input>
+      </Inputs>
+    </Execution>
+  </Storable>
+</Objects>

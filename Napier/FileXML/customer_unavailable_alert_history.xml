@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="customer_unavailable_alert_history">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>customer_unavailable_alert_history</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>customer_price_alert_id</Input>
+        <Input>alert_date</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>customer_unavailable_alert_history</Table>
+      <Inputs>
+        <Input>customer_price_alert_id</Input>
+        <Input>alert_date</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>customer_unavailable_alert_history</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>customer_price_alert_id</Input>
+        <Input>alert_date</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>customer_unavailable_alert_history</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+  </Storable>
+</Objects>

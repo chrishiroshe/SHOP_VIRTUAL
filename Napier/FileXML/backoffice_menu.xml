@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="backoffice_menu">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>backoffice_menu</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>name</Input>
+        <Input>active</Input>
+        <Input>parent_id</Input>
+        <Input>controller_name</Input>
+        <Input>action_name</Input>
+        <Input>show_user</Input>
+        <Input>menu_order</Input>
+        <Input>parameter</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>backoffice_menu</Table>
+      <Inputs>
+        <Input>name</Input>
+        <Input>active</Input>
+        <Input>parent_id</Input>
+        <Input>controller_name</Input>
+        <Input>action_name</Input>
+        <Input>show_user</Input>
+        <Input>menu_order</Input>
+        <Input>parameter</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>backoffice_menu</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>name</Input>
+        <Input>active</Input>
+        <Input>parent_id</Input>
+        <Input>controller_name</Input>
+        <Input>action_name</Input>
+        <Input>show_user</Input>
+        <Input>menu_order</Input>
+        <Input>parameter</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>backoffice_menu</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+  </Storable>
+</Objects>

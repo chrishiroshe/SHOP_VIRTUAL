@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="indexer_details">
+    <Execution cod="PS_GET_PRODUCT_DETAILS">
+      <Summary>Get Product Details</Summary>
+      <Proc>ps_get_product_details</Proc>
+      <Inputs>
+        <Input>product_id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="PS_GET_PRODUCT_DETAILS_VALUE">
+      <Summary>Get Product Details</Summary>
+      <Proc>ps_get_product_details_value</Proc>
+      <Inputs>
+        <Input>product_id</Input>
+      </Inputs>
+    </Execution>
+  </Storable>
+</Objects>

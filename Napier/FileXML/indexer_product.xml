@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="indexer_product">
+    <Execution cod="PS_GET_PRODUCTS_INDEXER_TOTAL">
+      <Summary>Get total</Summary>
+      <Proc>ps_get_products_indexer_total</Proc>
+    </Execution>
+    <Execution cod="PS_GET_PRODUCTS_INDEXER">
+      <Summary>Retrieve products to index</Summary>
+      <Proc>ps_get_products_indexer</Proc>
+      <CommandTimeout>180</CommandTimeout>
+      <Inputs>
+        <Input>itensToRetrieve</Input>
+        <Input>pageSize</Input>
+      </Inputs>
+    </Execution>
+  </Storable>
+</Objects>
+

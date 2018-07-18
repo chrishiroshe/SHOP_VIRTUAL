@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="product_click">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>product_click</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>click_date</Input>
+        <Input>customer_id</Input>
+        <Input>ip</Input>
+        <Input>store_click_price_id</Input>
+        <Input>product_id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>product_click</Table>
+      <Inputs>
+        <Input>click_date</Input>
+        <Input>customer_id</Input>
+        <Input>ip</Input>
+        <Input>store_click_price_id</Input>
+        <Input>product_id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>product_click</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>click_date</Input>
+        <Input>customer_id</Input>
+        <Input>ip</Input>
+        <Input>store_click_price_id</Input>
+        <Input>product_id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>product_click</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+  </Storable>
+</Objects>

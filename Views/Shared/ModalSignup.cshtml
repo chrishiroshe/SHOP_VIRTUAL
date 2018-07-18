@@ -1,0 +1,79 @@
+﻿<!-- Modal Signup start -->
+@model SV.Site.UI.ViewModels.CreateLoginViewModel
+
+    <div class="modal-dialog">
+        <section class="modal-content">
+            <header class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times; </button>
+                <h3 class="modal-title-site text-center"> Crie sua conta </h3>
+            </header>
+            <div class="modal-body">
+                @using (Html.BeginForm("CreateCustomer", "Login", FormMethod.Post, new { id = "frmRegister" }))
+                {
+                    <span id="spanerror" style="display:none" class="field-validation-error label-danger" data-valmsg-for="Name" data-valmsg-replace="true"></span>
+                    if (Model.lstError != null && Model.lstError.Count > 0 && Model.Success == false)
+                    {
+                        <span class="field-validation-error label-danger" data-valmsg-for="Name" data-valmsg-replace="true">@Model.lstError.FirstOrDefault().ErrorMessage</span>
+                        
+                    }
+                    else if (Model.Success)
+                    {
+                        <span class="field-validation-success label-success" data-valmsg-for="Name" data-valmsg-replace="true">Usuário Cadastrado com sucesso.</span>
+
+                    }
+     
+                <div class="control-group"> <a class="fb_button btn  btn-block btn-lg btn-login-face fb-cadastrar" href="#"> Conectar-se com Facebook </a> </div>
+                <h5 style="padding:10px 0 10px 0;" class="text-center"> Ou </h5>
+                <div class="form-group reg-username">
+                    <div>
+                        @Html.TextBoxFor(d => d.Name, new { maxlength = 150, @class = "form-control input", placeholder = "Digite seu Nome", id = "reg-name" })
+                        @Html.HiddenFor(d => d.FacebookID, new { id = "reg-fid" })
+                        @Html.ValidationMessageFor(m => m.Name,String.Empty, new { @class="label-danger"})
+                    </div>
+                </div>
+                <div class="form-group reg-email">
+                    <div>
+                        @Html.TextBoxFor(d => d.Email, new { maxlength = 150, @class = "form-control input", placeholder = "Digite seu Email", id = "reg-email" })
+                        @Html.ValidationMessageFor(m => m.Email, String.Empty, new { @class = "label-danger" })
+                    </div>
+                </div>
+                <div class="form-group reg-password">
+                    <div>
+                        @Html.PasswordFor(d => d.Password, new { maxlength = 10, @class = "form-control input", placeholder = "Digite sua Senha", id = "reg-password" })
+                        @Html.ValidationMessageFor(m => m.Password, String.Empty, new { @class = "label-danger" })
+                    </div>
+                </div>
+                <div class="form-group reg-password">
+                    <div>
+                        Ler o <a href="#" data-toggle="modal" data-target="#ModalTerms">Termo de Uso</a> e a <a href="#" data-toggle="modal" data-target="#ModalPrivacyPolicy">Politica de Privacidade</a>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div>
+                        <div class="checkbox login-remember">
+                            <label>
+                                @Html.CheckBoxFor(d => d.OptIn)
+                                Aceito receber e-mails do Shopping Virtual
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <input name="btnLogin" id="btnLogin" class="btn  btn-block btn-lg btn-primary btn-modal-sec" value="Aceitar os Termos de Uso e Cadastrar" type="button">
+                    </div>
+                </div>
+                <!--userForm-->
+                }
+            </div>
+            <footer class="modal-footer">
+                <p class="text-center"> Já possui cadastro? <a data-toggle="modal" data-dismiss="modal" href="#ModalLogin"> Entrar </a> </p>
+            </footer>
+        </section>
+        <!-- /.modal-content -->
+
+    </div>
+    <!-- /.modal-dialog -->
+
+
+<!-- /.ModalSignup End -->

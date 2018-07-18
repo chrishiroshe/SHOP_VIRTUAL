@@ -1,0 +1,182 @@
+﻿@model SV.Site.Facade.SearchResponseEntity
+@using SV.Common.Framework;
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container main-container headerOffset" rel="search" id="main-container">
+    <div class="row">
+        <!--left column:Filters-->
+        <div class="col-lg-3 col-md-4 col-sm-12">
+            @Html.Partial("~/Views/Shared/Search/CategoryList.cshtml", Model)
+        </div>
+        <!--right column:Results-->
+
+
+        <article class="col-sm-12 col-lg-9 col-md-8">
+            <nav class="breadcrumb-wrapper hidden-xs">
+                <ol class="breadcrumb">
+                    <li><a href="/">Home</a></li>
+                    <li class="active">Categorias</li>
+                </ol>
+            </nav>
+            <aside class="w100 clearfix category-top">
+                <h2 class="title-home">Procurando @Model.SearchParameters.FreeSearch? Selecione uma categoria:</h2>
+            </aside><!--/.category-top-->
+
+            <section class="row categoryProduct xsResponse clearfix container-results-products">
+
+                @foreach (KeyValuePair<long, List<SV.Common.Core.IndexerProductModel>> item in Model.GroupedCategoryResults)
+                {
+                    var category = Model.Categories.FirstOrDefault(d => d.id == item.Key);
+                    <article class="item col-sm-4 col-lg-3 col-md-4 col-xs-6">
+                        <div class="product box-model">
+                            <figure class="image image_category">
+                                <a href="@category.CategoryUrl">
+                                    <img class="img-responsive" style="width:35%;" src="@category.image_url" alt="Comprar produtos de @category.name" title="Comprar produtos de @category.name">
+                                </a>
+                            </figure>
+                            <h3 class="title">
+                                <a href="@category.CategoryUrl">
+                                    @category.name
+                                </a>
+                            </h3>
+                        </div>
+                    </article>
+                }
+
+            </section>
+
+            <section class="row categoryProduct xsResponse clearfix container-results-products">
+                @foreach (KeyValuePair<long, List<SV.Common.Core.IndexerProductModel>> item in Model.GroupedCategoryResults)
+                {
+                    <header class="col-xs-12 clearfix title-resultados-categorias">
+                        <div class="pull-left">
+                            <h3 class="title">@Model.Categories.FirstOrDefault(d => d.id == item.Key).name.ToUpper()</h3>
+                        </div>
+                    </header>
+
+                    <div class="clearfix">
+                        @foreach (var product in item.Value)
+                        {
+                            <article class="item col-sm-4 col-lg-4 col-md-4 col-xs-6 list-view">
+                                <div class="product box-model">
+                                    @*TODO:IMPLEMENTAR
+                                    <div class="flag flag-baixou">
+                                        <span class="label">Baixou</span>
+                                    </div>
+                                    *@
+                                    <figure class="image">
+                                        <a href="/produto/@product.site_url.Replace(" ","-")">
+                                            <img src="@product.image_url" class="img-responsive" alt="@product.name" title="@product.name">
+                                        </a>
+                                    </figure>
+                                    <div class="description">
+                                        <h3 class="title">
+                                            <a href="/produto/@product.site_url.Replace(" ","-")">
+                                                @product.name
+                                            </a>
+                                        </h3>
+
+                                        <section class="stars tooltipOn clearfix" data-toggle="tooltip" data-original-title="52 Avaliações">
+                                            <span class="svg-wrapper">
+                                                <svg version="1.1" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+                                                <path d="M55.369,26.992c-0.085-0.261-0.391-0.867-1.395-0.867H38.27l-4.852-14.936c-0.311-0.955-0.983-1.058-1.257-1.058
+	                                        c-0.275,0-0.948,0.103-1.255,1.058l-4.854,14.936H10.349c-1.033,0-1.327,0.664-1.391,0.861c-0.068,0.204-0.227,0.916,0.613,1.528
+	                                        l12.706,9.231l-4.855,14.94c-0.21,0.66-0.039,1.09,0.139,1.33c0.4,0.553,1.244,0.62,1.895,0.142l12.706-9.23l12.703,9.229
+	                                        c0.314,0.229,0.621,0.343,0.939,0.343c0.387,0,0.735-0.176,0.961-0.483c0.178-0.246,0.346-0.679,0.135-1.334l-4.854-14.937
+	                                        l12.71-9.232C55.561,27.924,55.453,27.254,55.369,26.992z M40.21,36.503c-0.364,0.265-0.519,0.729-0.381,1.166l4.36,13.42
+	                                        l-11.42-8.297c-0.353-0.252-0.858-0.255-1.221,0.003L20.133,51.09l4.361-13.423c0.139-0.429-0.013-0.896-0.378-1.163L12.699,28.21
+	                                        H26.81c0.455,0,0.854-0.29,0.99-0.721l4.36-13.419l4.361,13.422c0.143,0.43,0.541,0.718,0.992,0.718h14.109L40.21,36.503z"></path>
+                                    </svg>
+                                            </span>
+                                            <span class="svg-wrapper">
+                                                <svg version="1.1" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+                                                <path d="M55.369,26.992c-0.085-0.261-0.391-0.867-1.395-0.867H38.27l-4.852-14.936c-0.311-0.955-0.983-1.058-1.257-1.058
+	                                        c-0.275,0-0.948,0.103-1.255,1.058l-4.854,14.936H10.349c-1.033,0-1.327,0.664-1.391,0.861c-0.068,0.204-0.227,0.916,0.613,1.528
+	                                        l12.706,9.231l-4.855,14.94c-0.21,0.66-0.039,1.09,0.139,1.33c0.4,0.553,1.244,0.62,1.895,0.142l12.706-9.23l12.703,9.229
+	                                        c0.314,0.229,0.621,0.343,0.939,0.343c0.387,0,0.735-0.176,0.961-0.483c0.178-0.246,0.346-0.679,0.135-1.334l-4.854-14.937
+	                                        l12.71-9.232C55.561,27.924,55.453,27.254,55.369,26.992z M40.21,36.503c-0.364,0.265-0.519,0.729-0.381,1.166l4.36,13.42
+	                                        l-11.42-8.297c-0.353-0.252-0.858-0.255-1.221,0.003L20.133,51.09l4.361-13.423c0.139-0.429-0.013-0.896-0.378-1.163L12.699,28.21
+	                                        H26.81c0.455,0,0.854-0.29,0.99-0.721l4.36-13.419l4.361,13.422c0.143,0.43,0.541,0.718,0.992,0.718h14.109L40.21,36.503z"></path>
+                                    </svg>
+                                            </span>
+                                            <span class="svg-wrapper">
+                                                <svg version="1.1" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+                                                <path d="M55.369,26.992c-0.085-0.261-0.391-0.867-1.395-0.867H38.27l-4.852-14.936c-0.311-0.955-0.983-1.058-1.257-1.058
+	                                                        c-0.275,0-0.948,0.103-1.255,1.058l-4.854,14.936H10.349c-1.033,0-1.327,0.664-1.391,0.861c-0.068,0.204-0.227,0.916,0.613,1.528
+	                                                        l12.706,9.231l-4.855,14.94c-0.21,0.66-0.039,1.09,0.139,1.33c0.4,0.553,1.244,0.62,1.895,0.142l12.706-9.23l12.703,9.229
+	                                                        c0.314,0.229,0.621,0.343,0.939,0.343c0.387,0,0.735-0.176,0.961-0.483c0.178-0.246,0.346-0.679,0.135-1.334l-4.854-14.937
+	                                                        l12.71-9.232C55.561,27.924,55.453,27.254,55.369,26.992z M40.21,36.503c-0.364,0.265-0.519,0.729-0.381,1.166l4.36,13.42
+	                                                        l-11.42-8.297c-0.353-0.252-0.858-0.255-1.221,0.003L20.133,51.09l4.361-13.423c0.139-0.429-0.013-0.896-0.378-1.163L12.699,28.21
+	                                                        H26.81c0.455,0,0.854-0.29,0.99-0.721l4.36-13.419l4.361,13.422c0.143,0.43,0.541,0.718,0.992,0.718h14.109L40.21,36.503z"></path>
+                                                        </svg>
+                                            </span>
+                                            <span class="svg-wrapper">
+                                                <svg version="1.1" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+                                                <path d="M55.369,26.992c-0.085-0.261-0.391-0.867-1.395-0.867H38.27l-4.852-14.936c-0.311-0.955-0.983-1.058-1.257-1.058
+	                                        c-0.275,0-0.948,0.103-1.255,1.058l-4.854,14.936H10.349c-1.033,0-1.327,0.664-1.391,0.861c-0.068,0.204-0.227,0.916,0.613,1.528
+	                                        l12.706,9.231l-4.855,14.94c-0.21,0.66-0.039,1.09,0.139,1.33c0.4,0.553,1.244,0.62,1.895,0.142l12.706-9.23l12.703,9.229
+	                                        c0.314,0.229,0.621,0.343,0.939,0.343c0.387,0,0.735-0.176,0.961-0.483c0.178-0.246,0.346-0.679,0.135-1.334l-4.854-14.937
+	                                        l12.71-9.232C55.561,27.924,55.453,27.254,55.369,26.992z M40.21,36.503c-0.364,0.265-0.519,0.729-0.381,1.166l4.36,13.42
+	                                        l-11.42-8.297c-0.353-0.252-0.858-0.255-1.221,0.003L20.133,51.09l4.361-13.423c0.139-0.429-0.013-0.896-0.378-1.163L12.699,28.21
+	                                        H26.81c0.455,0,0.854-0.29,0.99-0.721l4.36-13.419l4.361,13.422c0.143,0.43,0.541,0.718,0.992,0.718h14.109L40.21,36.503z"></path>
+                                    </svg>
+                                            </span>
+                                            <span class="svg-wrapper">
+                                                <svg version="1.1" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+                                                <path d="M55.369,26.992c-0.085-0.261-0.391-0.867-1.395-0.867H38.27l-4.852-14.936c-0.311-0.955-0.983-1.058-1.257-1.058
+	                                        c-0.275,0-0.948,0.103-1.255,1.058l-4.854,14.936H10.349c-1.033,0-1.327,0.664-1.391,0.861c-0.068,0.204-0.227,0.916,0.613,1.528
+	                                        l12.706,9.231l-4.855,14.94c-0.21,0.66-0.039,1.09,0.139,1.33c0.4,0.553,1.244,0.62,1.895,0.142l12.706-9.23l12.703,9.229
+	                                        c0.314,0.229,0.621,0.343,0.939,0.343c0.387,0,0.735-0.176,0.961-0.483c0.178-0.246,0.346-0.679,0.135-1.334l-4.854-14.937
+	                                        l12.71-9.232C55.561,27.924,55.453,27.254,55.369,26.992z M40.21,36.503c-0.364,0.265-0.519,0.729-0.381,1.166l4.36,13.42
+	                                        l-11.42-8.297c-0.353-0.252-0.858-0.255-1.221,0.003L20.133,51.09l4.361-13.423c0.139-0.429-0.013-0.896-0.378-1.163L12.699,28.21
+	                                        H26.81c0.455,0,0.854-0.29,0.99-0.721l4.36-13.419l4.361,13.422c0.143,0.43,0.541,0.718,0.992,0.718h14.109L40.21,36.503z"></path>
+                                    </svg>
+                                            </span>
+                                        </section>
+
+                                    </div>
+                                    <section class="price">
+                                        <span class="a-partir">
+                                            R$ @product.price.ToString("N2") em
+                                            <span class="resultado-loja-unica">
+                                                <img src="@product.store_logo_url" title="@product.store_name" alt="@product.store_name" />
+                                            </span>
+                                        </span>
+                                        <a class="btn btn-primary btn-small btn-pri btn-a-partir tooltipOn" href="@Url.RouteUrl("SearchRedirect", new { id = SV.Common.Framework.StringHelpers.GenerateUrlValue(string.Format("{0}@{1}", product.external_product_id, product.store_id), true) })" target="_blank" data-toggle="tooltip" data-original-title="Economize!">
+                                            <i class="glyphicon glyphicon-shopping-cart">
+                                            </i>
+                                            Ir para a Loja
+                                        </a>
+                                    </section>
+                                </div>
+                            </article>
+                            <div class="clear"></div>
+                        }
+                    </div>
+
+                }
+            </section>
+            <div class="clearfix"></div>
+            <!--<div class="w100 categoryFooter">
+                <nav class="pagination pull-left no-margin-top">
+                    <ul class="pagination no-margin-top">
+                        <li><a href="http://localhost:49781/categoria/tv/samsung?pagina=1">&lt; Anterior</a></li>
+                        <li class="&quot;active&quot;"><a href="http://localhost:49781/categoria/tv/samsung?pagina=1">1</a></li>
+                        <li><a href="http://localhost:49781/categoria/tv/samsung?pagina=2">2</a></li>
+
+                        <li><a href="http://localhost:49781/categoria/tv/samsung?pagina=2">Proxima &gt;</a></li>
+                    </ul>
+                </nav>
+                <div class="pull-right pull-right  col-sm-4 col-xs-12 no-padding text-right text-left-xs">
+                    <p>Página 1 de 2</p>
+                </div>
+
+            </div>-->
+        </article>
+
+
+    </div>
+
+</div>

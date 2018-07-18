@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="banner">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>banner</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>banner_type_id</Input>
+        <Input>url</Input>
+        <Input>active</Input>
+        <Input>category_id</Input>
+        <Input>manufacturer_id</Input>
+        <Input>product_id</Input>
+        <Input>name</Input>
+        <Input>begin_date</Input>
+        <Input>end_date</Input>
+        <Input>url_link</Input>
+        <Input>banner_order</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>banner</Table>
+      <Inputs>
+        <Input>banner_type_id</Input>
+        <Input>url</Input>
+        <Input>active</Input>
+        <Input>category_id</Input>
+        <Input>manufacturer_id</Input>
+        <Input>product_id</Input>
+         <Input>name</Input>
+        <Input>begin_date</Input>
+        <Input>end_date</Input>
+        <Input>url_link</Input>
+        <Input>banner_order</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>banner</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>banner_type_id</Input>
+        <Input>url</Input>
+        <Input>active</Input>
+        <Input>category_id</Input>
+        <Input>manufacturer_id</Input>
+        <Input>product_id</Input>
+        <Input>name</Input>
+        <Input>begin_date</Input>
+        <Input>end_date</Input>
+        <Input>url_link</Input>
+        <Input>banner_order</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>banner</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="PS_GET_BANNERS">
+      <Summary>Update and Retrieve products pending</Summary>
+      <Proc>ps_get_banners</Proc>
+      <Inputs>
+        <Input>active</Input>
+        <Input>manufacturerName</Input>
+        <Input>categoryName</Input>
+        <Input>productName</Input>
+        <Input>bannerName</Input>
+        <Input>beginDate</Input>
+        <Input>endDate</Input>
+        <Input>id</Input>
+        <Input>bannertype</Input>
+        <Input>itensToRetrieve</Input>
+        <Input>page</Input>
+      </Inputs>
+    </Execution>
+  </Storable>
+</Objects>

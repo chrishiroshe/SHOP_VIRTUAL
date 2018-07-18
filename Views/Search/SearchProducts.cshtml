@@ -1,0 +1,227 @@
+﻿@using SV.Common.Core;
+@model SV.Site.Facade.SearchResponseEntity
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@if (Model.ProductMatch != null)
+{
+    var productMatch = Model.ProductMatch;
+
+    <main class="container main-container headerOffset" rel="search" id="main-container">
+        <section class="row transitionfx product-detail-container">
+            <div class="col-sm-12 hidden-xs">
+                <nav class="breadcrumb-wrapper">
+                    <ol class="breadcrumb">
+                        <li><a href="/">Home</a></li>
+                        @{
+                            if (Model.CategoryID > 0)
+                            { 
+                                var breadCrumb = CategoryModel.GetCategoryHierarchy(CategoryModel.GetCategoryByID(Model.CategoryID));
+                                foreach (var cat in breadCrumb.OrderByDescending(d => d.Key).ToList())
+                                {
+                                    <li><a href="@cat.Value.CategoryUrl">@cat.Value.name</a></li>
+                                }
+                            }
+                        }
+                        <li class="active">@productMatch.Product.name</li>
+                    </ol>
+                </nav>
+            </div>
+            <figure class="product-detail-img-wrapper col-xs-12 col-sm-4 col-md-3">
+                @if (productMatch.Product.ProductImage != null && productMatch.Product.ProductImage.Count > 0)
+                { 
+                <img src="@(productMatch.Product.ProductImage.FirstOrDefault(d=>d.main_image).image_url ?? productMatch.Product.ProductImage.FirstOrDefault().image_url)"
+                     alt="@productMatch.Product.name" title="@productMatch.Product.name">
+                }
+            </figure>
+            <header class="col-lg-9 col-md-8 col-sm-8 product-detail-text">
+                <h1 class="title-product-name">@productMatch.Product.name</h1>
+                <div>A Partir de @productMatch.PriceFrom</div>
+                <div class="col-lg-6 col-md-6 col-sm-5 col-xs-12">
+                    <section class="stars tooltipOn clearfix" data-toggle="tooltip" data-original-title="52 Avaliações">
+                        <span class="svg-wrapper">
+                            <svg version="1.1" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+                            <path d="M55.369,26.992c-0.085-0.261-0.391-0.867-1.395-0.867H38.27l-4.852-14.936c-0.311-0.955-0.983-1.058-1.257-1.058
+	                            c-0.275,0-0.948,0.103-1.255,1.058l-4.854,14.936H10.349c-1.033,0-1.327,0.664-1.391,0.861c-0.068,0.204-0.227,0.916,0.613,1.528
+	                            l12.706,9.231l-4.855,14.94c-0.21,0.66-0.039,1.09,0.139,1.33c0.4,0.553,1.244,0.62,1.895,0.142l12.706-9.23l12.703,9.229
+	                            c0.314,0.229,0.621,0.343,0.939,0.343c0.387,0,0.735-0.176,0.961-0.483c0.178-0.246,0.346-0.679,0.135-1.334l-4.854-14.937
+	                            l12.71-9.232C55.561,27.924,55.453,27.254,55.369,26.992z M40.21,36.503c-0.364,0.265-0.519,0.729-0.381,1.166l4.36,13.42
+	                            l-11.42-8.297c-0.353-0.252-0.858-0.255-1.221,0.003L20.133,51.09l4.361-13.423c0.139-0.429-0.013-0.896-0.378-1.163L12.699,28.21
+	                            H26.81c0.455,0,0.854-0.29,0.99-0.721l4.36-13.419l4.361,13.422c0.143,0.43,0.541,0.718,0.992,0.718h14.109L40.21,36.503z" />
+                        </svg>
+                        </span>
+                        <span class="svg-wrapper">
+                            <svg version="1.1" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+                            <path d="M55.369,26.992c-0.085-0.261-0.391-0.867-1.395-0.867H38.27l-4.852-14.936c-0.311-0.955-0.983-1.058-1.257-1.058
+	                            c-0.275,0-0.948,0.103-1.255,1.058l-4.854,14.936H10.349c-1.033,0-1.327,0.664-1.391,0.861c-0.068,0.204-0.227,0.916,0.613,1.528
+	                            l12.706,9.231l-4.855,14.94c-0.21,0.66-0.039,1.09,0.139,1.33c0.4,0.553,1.244,0.62,1.895,0.142l12.706-9.23l12.703,9.229
+	                            c0.314,0.229,0.621,0.343,0.939,0.343c0.387,0,0.735-0.176,0.961-0.483c0.178-0.246,0.346-0.679,0.135-1.334l-4.854-14.937
+	                            l12.71-9.232C55.561,27.924,55.453,27.254,55.369,26.992z M40.21,36.503c-0.364,0.265-0.519,0.729-0.381,1.166l4.36,13.42
+	                            l-11.42-8.297c-0.353-0.252-0.858-0.255-1.221,0.003L20.133,51.09l4.361-13.423c0.139-0.429-0.013-0.896-0.378-1.163L12.699,28.21
+	                            H26.81c0.455,0,0.854-0.29,0.99-0.721l4.36-13.419l4.361,13.422c0.143,0.43,0.541,0.718,0.992,0.718h14.109L40.21,36.503z" />
+                        </svg>
+                        </span>
+                        <span class="svg-wrapper">
+                            <svg version="1.1" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+                            <path d="M55.369,26.992c-0.085-0.261-0.391-0.867-1.395-0.867H38.27l-4.852-14.936c-0.311-0.955-0.983-1.058-1.257-1.058
+	                            c-0.275,0-0.948,0.103-1.255,1.058l-4.854,14.936H10.349c-1.033,0-1.327,0.664-1.391,0.861c-0.068,0.204-0.227,0.916,0.613,1.528
+	                            l12.706,9.231l-4.855,14.94c-0.21,0.66-0.039,1.09,0.139,1.33c0.4,0.553,1.244,0.62,1.895,0.142l12.706-9.23l12.703,9.229
+	                            c0.314,0.229,0.621,0.343,0.939,0.343c0.387,0,0.735-0.176,0.961-0.483c0.178-0.246,0.346-0.679,0.135-1.334l-4.854-14.937
+	                            l12.71-9.232C55.561,27.924,55.453,27.254,55.369,26.992z M40.21,36.503c-0.364,0.265-0.519,0.729-0.381,1.166l4.36,13.42
+	                            l-11.42-8.297c-0.353-0.252-0.858-0.255-1.221,0.003L20.133,51.09l4.361-13.423c0.139-0.429-0.013-0.896-0.378-1.163L12.699,28.21
+	                            H26.81c0.455,0,0.854-0.29,0.99-0.721l4.36-13.419l4.361,13.422c0.143,0.43,0.541,0.718,0.992,0.718h14.109L40.21,36.503z" />
+                        </svg>
+                        </span>
+                    </section>
+                    <aside class="product-social">
+                        <div class="row">
+                            <div class="btn-social product-social-face">
+                                <div class="fb-like" data-href="https://www.facebook.com/shopv" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+                            </div>
+                            <div class="btn-social product-social-twitter">
+                                <!-- Tem um jeito de encurtar a URL pro Tweet? -->
+                                <a href="https://twitter.com/share" class="twitter-share-button" data-text="@productMatch.Product.name por R$ @productMatch.PriceFrom" data-lang="pt" data-count="none">Tweetar</a>
+                                <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + '://platform.twitter.com/widgets.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'twitter-wjs');</script>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+                <div class="col-lg-6 col-sm-6 col-xs-12 text-right pull-right product-actions">
+                    <a class="btn btn-success btn-sm tooltipOn no-border" href="#" data-toggle="tooltip" data-original-title="Salve em sua Lista">
+                        Salvar
+                        <i class="fa fa-check">
+                        </i>
+                    </a>
+                    <a class="btn btn-pri btn-sm tooltipOn no-border" href="#" data-toggle="tooltip" data-original-title="Envie-me um alerta de Preço">
+                        Alerta de Preço
+                        <i class=" fa fa-bell-o">
+                        </i>
+                    </a>
+                </div>
+            </header>
+        </section>
+
+        <div class="clearfix"></div>
+        <section class="product-tab w100 clearfix">
+            <nav class="product-detail-tabs">
+                <ul class="nav nav-tabs">
+                    <li class="active no-chart"><a href="#precos" data-toggle="tab">Preços</a></li>
+                    <li class="no-chart"><a href="#details" data-toggle="tab">Detalhes</a></li>
+                    <li class="no-chart"><a href="#photos" data-toggle="tab">Fotos e Videos</a></li>
+                    @*<li><a href="#history" data-toggle="tab" id="historico-precos">Histórico de Preços</a></li>*@                    
+                    @*<li class="no-chart"><a href="#reviews" data-toggle="tab">Avaliações</a></li>
+                    <li class="no-chart"><a href="#specialist" data-toggle="tab">Especialista</a></li>*@
+                </ul>
+            </nav>
+            <article class="tab-content">
+                <section class="tab-pane active" id="precos">
+                    <div class="row">
+                        <!--right column:Results-->
+                        <div class="col-xs-12">
+                            <div class="w100 productFilter clearfix">
+                                <div class="pull-right container-select-order">
+                                    <div class="change-order container-select-order pull-right">
+                                        <!-- Doc do plugin utilizado: lcdsantos.github.io/jQuery-Selectric/ -->
+                                        <select class="form-control selectric" name="selOrder" id="selOrder">
+                                            <option selected="selected">Ordenar por:</option>
+                                            <option name="relevancia" value="score">Relevancia</option>
+                                            <option name="menor-maior" value="price-asc">Preço: Menor > Maior</option>
+                                            <option name="maior-menor" value="price-desc">Preço: Maior > Menor</option>
+                                            <option name="nome-az" value="name-asc">Nome: A > Z</option>
+                                            <option name="nome-za" value="name-desc">Nome: Z > A</option>
+                                            <option name="loja-az" value="store-asc">Loja: A > Z</option>
+                                            <option name="loja-za" value="store-desc">Loja: Z > A</option>
+                                            <option name="review" value="review-desc">Melhor avaliado</option>
+                                            <option name="datalancamento-menor" value="launchdate-asc">Data: mais atual</option>
+                                            <option name="datalancamento-maior" value="launchdate-desc">Data: mais antigo</option>
+                                        </select>
+                                    </div>
+                                    <div class="change-view pull-right hidden-xs">
+                                        <a href="#" title="Grid" class="grid-view"> <i class="fa fa-th-large"></i> </a>
+                                        <a href="#" title="List" class="list-view "><i class="fa fa-th-list"></i></a>
+                                    </div>
+                                </div>
+                            </div> <!--/.productFilter-->
+                            @Html.Partial("~/Views/Shared/Search/SearchProducts.cshtml")
+                            <div class="clearfix"></div>
+                            <div class="w100 categoryFooter">
+                                @Html.Partial("~/Views/Shared/Search/SearchPagination.cshtml", Model)
+                            </div>
+                        </div><!--/right column end-->
+                    </div><!-- /.row  -->
+                </section>
+                <section class="tab-pane product-more-details" id="details">
+                    @Html.Partial("~/Views/Shared/Product/ProductDetails.cshtml", productMatch)
+                </section>
+                <section class="tab-pane product-more-details" id="photos">
+                    @Html.Partial("~/Views/Shared/Product/ProductPhotos.cshtml", Model.ProductMatch)
+                </section>
+                @*<section class="tab-pane product-more-details" id="history">
+                    @Html.Partial("~/Views/Shared/Product/ProductPriceHistory.cshtml", productMatch)
+                </section>*@
+                @*<section class="tab-pane product-more-details" id="reviews">
+                    @Html.Partial("~/Views/Shared/Product/ProductReviews.cshtml", Model.ProductMatch)
+                </section>*@
+                @*<section class="tab-pane product-more-details" id="specialist">
+                    @Html.Partial("~/Views/Shared/Product/ProductSpecialist.cshtml", Model.ProductMatch)
+                </section>*@
+            </article> <!-- /.tab content -->
+        </section><!--/.product-tab-->
+    </main>
+}
+
+
+
+@section scripts{
+    <script>        
+        $('.product-detail-tabs li.no-chart').on('click', function () {
+            $('#history').hide();
+        });
+
+        //Doc do plugin de gráfico: chartjs.org/docs/
+        $('#historico-precos').on('click', function () {            
+            $('#history').show();
+            var randomScalingFactor = function () { return Math.round(Math.random() * 100) };
+            var lineChartData = {
+                labels: ["Junho", "Julho", "Agosto", "Setembro"],
+                datasets: [
+                    {
+                        label: "Histórico de Preços (R$)",
+                        fillColor: "rgba(220,220,220,0.2)",
+                        strokeColor: "#3C719C",
+                        pointColor: "#3C719C",
+                        pointStrokeColor: "#fff",
+                        pointHighlightFill: "#fff",
+                        pointHighlightStroke: "rgba(220,220,220,1)",
+                        data: [4900, 4700, 4500, 4600]
+                    }
+                ]
+
+            }
+
+            var ctx = document.getElementById("grafico-historico-precos").getContext("2d");
+            window.myLine = new Chart(ctx).Line(lineChartData, {
+                responsive: true
+            });
+        });
+        
+        (function ($) {
+            $('.swipebox').swipebox({
+                useSVG: true,
+                hideBarsDelay: 0
+            });
+        })(jQuery);
+
+        $("#product-rating").rating({
+            showCaption: false
+        });
+
+        $('#product-rating').on('rating.change', function (event, value, caption) {
+            alert(value + ' estrelas selecionadas');
+        });
+
+        $('#selOrder').val('@Model.SelectedSort');
+        $('#selOrder').selectric('refresh');
+    </script>
+}

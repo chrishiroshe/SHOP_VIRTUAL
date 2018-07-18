@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="store_payment_recurrrence">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>store_payment_recurrrence</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>store_payment_oneclick_id</Input>
+        <Input>recurrence_type</Input>
+        <Input>recurrence_ammount</Input>
+        <Input>active</Input>
+        <Input>created_date</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>store_payment_recurrrence</Table>
+      <Inputs>
+        <Input>store_payment_oneclick_id</Input>
+        <Input>recurrence_type</Input>
+        <Input>recurrence_ammount</Input>
+        <Input>active</Input>
+        <Input>created_date</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>store_payment_recurrrence</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>store_payment_oneclick_id</Input>
+        <Input>recurrence_type</Input>
+        <Input>recurrence_ammount</Input>
+        <Input>active</Input>
+        <Input>created_date</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>store_payment_recurrrence</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+  </Storable>
+</Objects>

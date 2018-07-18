@@ -1,0 +1,151 @@
+﻿<section class="navbar-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-sm-6 col-xs-6 col-md-6">
+                <nav class="pull-left">
+                    @*<ul class="userMenuLeft">
+                        <li> 
+                            <a href="#">
+                                <span class="hidden-xs btn-navbar-top btn-pri-flat-reverse ajuda">Ajuda</span>
+                                <i class="glyphicon glyphicon-info-sign hide visible-xs "></i>
+                            </a>
+                        </li>
+                    </ul>*@
+                </nav>
+            </div>
+            <div class="col-lg-6 col-sm-6 col-xs-6 col-md-6 no-margin no-padding">
+                <nav class="pull-right">
+                    <ul class="userMenu">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#ModalLogin" id="loginuser">
+                                <span class="hidden-xs btn-navbar-top btn-pri-flat-reverse" title="Entrar na sua conta">Entrar</span>
+                                <i class="glyphicon glyphicon-log-in hide visible-xs "></i>
+                            </a>
+                        </li>
+                        <li class="hidden-xs">
+                            <a href="#" data-toggle="modal" data-target="#ModalSignup" id="createuser">
+                                <span class="hidden-xs btn-navbar-top btn-pri-flat-reverse" title="Criar conta no Shopping Virtual">Criar Conta</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="userMenuAuth">
+                        <li id="userData">
+                            <a href="#">
+                                @*<span id="user-avatar" style="display:none;"><img src="" style="width: 20%;"/></span>&nbsp;*@
+                                <span id="user-avatar" style="display:none;" class="img-fb"></span>
+                                <span id="user-name"></span>
+                            </a>
+                        </li>
+                        <li class="hidden-xs"  id="logoutuser">
+                            <a href="#" id="logout"> Não é você? Clique aqui </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container">
+    <div class="content-header-search clearfix">
+        <div class="row">
+            <div class="col-xs-9 col-sm-3">
+                <figure class="logo-sv">
+                    <a href="/">
+                        <img src="@Url.Content("~/images/sv/logo-sv.png")" title="Shopping Virtual" alt="Shopping Virtual">
+                    </a>
+                </figure>
+            </div>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".search-collapse">
+                <span class="sr-only"> Toggle navigation </span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="col-xs-12 col-sm-9 search-collapse collapse">
+                <fieldset class="wrapper-search js-wrapper-search" id="">
+                    <input type="text" class="font-title input-search-site col-xs-12" id="txtSearch" placeholder="Digite o produto, marca ou modelo">
+                    <button class="btn btn-pri btn-site-search font-title" type="button" id="btnSearch" title="Buscar no Shopping Virtual">
+                        Buscar
+                    </button>
+                </fieldset>
+            </div>
+        </div>
+        
+    </div><!-- content-header-search -->
+</section><!-- content -->
+
+<!--
+<div id="fb-root"></div>
+
+<div class="bg-vincular-face-first">
+    <div class="box-vincular-face">
+        <span class="fechar-lightbox"><img src="Content/Images/assets/btn-fechar.png" alt=""></span>
+        <div class="imgs-vincular-face">
+            <img class="seta-vincular-face" src="/Content/Images/assets/setas-logar-face.png">
+            <img src="/Content/Images/assets/ico-face-radius.png" alt="Conectar com Facebook" title="Conectar com Facebook">
+        </div>
+
+        <p class="vincular-face">
+            Olá! encontramos o seu cadastro na asdasdds! Por questões de segurança, digite sua senha novamente e boas compras!
+        </p>
+
+        <div class="container-inputs">
+            <div class="wrapper-input" style="display:none;">
+                <label for="email">E-mail</label>
+                <input type="hidden" id="fb-id-first">
+                <input type="text" id="fb-email-first">
+            </div>
+            <br /><br />
+            <div class="wrapper-input">
+                <label for="senha" class="senha">Senha</label>
+                <input type="password" id="fb-senha-first">
+            </div>
+            <br /><br />
+        </div>
+
+        <div class="fb-errors">
+            <span class="empty-fields">Os campos são obrigatórios para vincular a conta</span>
+            <span class="wrong-fields">Dados incorretos, por favor tente novamente</span>
+        </div>
+
+        <input type="button" value="Vincular Conta" class="btn-vincular-conta-first">
+    </div>
+</div>
+
+<div class="bg-vincular-face">
+    <div class="box-vincular-face">
+        <span class="fechar-lightbox"><img src="/Content/Images/assets/btn-fechar.png" alt=""></span>
+        <div class="imgs-vincular-face">
+            <img class="seta-vincular-face" src="/Content/Images/assets/setas-logar-face.png">
+            <img src="/Content/Images/assets/ico-face-radius.png" alt="Conectar com Facebook" title="Conectar com Facebook">
+        </div>
+
+        <p class="vincular-face">
+            Ops! Não encontramos o seu cadastro! Talvez os e-mails
+            utilizados sejam diferentes. Digite o seu login e senha
+            da jjj e vincule com o Facebook
+        </p>
+
+        <div class="container-inputs">
+            <div class="wrapper-input">
+                <label for="email">E-mail</label>
+                <input type="hidden" id="fb-id">
+                <input type="text" id="fb-email">
+            </div>
+
+            <div class="wrapper-input">
+                <label for="senha" class="senha">Senha</label>
+                <input type="password" id="fb-senha">
+            </div>
+        </div>
+
+        <div class="fb-errors">
+            <span class="empty-fields">Os campos são obrigatórios para vincular a conta</span>
+            <span class="wrong-fields">O usuário e a senha estão incorretos</span>
+        </div>
+
+        <input type="button" value="Vincular Conta" class="btn-vincular-conta">
+    </div>
+</div>
+    -->

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="product_image">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>product_image</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>product_id</Input>
+        <Input>description</Input>
+        <Input>active</Input>
+        <Input>image_size_id</Input>
+        <Input>image_url</Input>
+        <Input>main_image</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>product_image</Table>
+      <Inputs>
+        <Input>product_id</Input>
+        <Input>description</Input>
+        <Input>active</Input>
+        <Input>image_size_id</Input>
+        <Input>image_url</Input>
+        <Input>main_image</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>product_image</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>product_id</Input>
+        <Input>description</Input>
+        <Input>active</Input>
+        <Input>image_size_id</Input>
+        <Input>image_url</Input>
+        <Input>main_image</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>product_image</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+  </Storable>
+</Objects>

@@ -1,0 +1,35 @@
+﻿/*===== Detalhes do Produto =====*/
+.product-detail-container {
+  margin-bottom: 15px;
+}
+.product-detail-container .title-product-name {
+  font-size: 23px;
+  line-height: 1.4;
+}
+.product-detail-container .product-detail-img-wrapper {
+  float: left;
+}
+.product-detail-container .product-detail-img-wrapper img {
+  width: 220px;
+  margin: 0 auto;
+  display: block;
+}
+@media (max-width: 767px) {
+  .product-detail-container .product-actions {
+    text-align: center;
+    margin: 10px auto 20px auto;
+  }
+  .product-detail-text {
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
+  .product-detail-text .stars {
+    margin-left: -18px;
+  }
+}
+/* Tabs */
+.product-detail-tabs ul li a {
+  text-transform: capitalize;
+}
+/*# sourceMappingURL=productDetails.css.map */

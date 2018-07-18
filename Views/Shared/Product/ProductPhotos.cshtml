@@ -1,0 +1,39 @@
+﻿@model SV.Site.Facade.SearchEntities.SearchProductEntity
+<article class="fotos-videos-wrapper row">
+    <header class="col-xs-12">
+        <h4 class="title">Fotos</h4>
+    </header>
+    @if (Model.Product.ProductImage != null && Model.Product.ProductImage.Count > 0)
+    {
+        foreach (var photo in Model.Product.ProductImage.FindAll(d => d.image_size_id == (int)ImageSize.Detail))
+        { 
+            <section class="fotos-videos-item col-xs-6 col-sm-4 col-md-3">
+                <figure class="image box-model tooltipOn" data-toggle="tooltip" data-original-title="Clique para expandir a imagem">
+                    <a class="swipebox" href="@photo.image_url">
+                        <img src="@photo.image_url" class="img-responsive" alt="@photo.description">
+                    </a>
+                </figure>
+            </section>
+        }
+    }
+</article>
+@*<article class="fotos-videos-wrapper row">
+    <header class="col-xs-12">
+        <h4 class="title">Vídeos</h4>
+    </header>
+    <section class="fotos-videos-item col-xs-6 col-sm-4 col-md-3">
+        <figure class="image box-model tooltipOn" data-toggle="tooltip" data-original-title="Clique para ver o vídeo">
+            <a class="swipebox" href="https://www.youtube.com/watch?v=sKoY9d5Sao0">
+                <img src="/images/sv/produtos/smartphone-samsung-galaxy-s5-sm-g900m-desbloqueado_100x100-PU88385_1.jpg" class="img-responsive" alt="TV LED 60&quot; Full HD Samsung FH6003 com Conversor Digital, Função Futebol, Clear Motion Rate 120Hz, Entradas HDMI e USB" title="TV LED 60&quot; Full HD Samsung FH6003 com Conversor Digital, Função Futebol, Clear Motion Rate 120Hz, Entradas HDMI e USB">
+            </a>
+        </figure>
+    </section>
+    <section class="fotos-videos-item col-xs-6 col-sm-4 col-md-3">
+        <figure class="image box-model tooltipOn" data-toggle="tooltip" data-original-title="Clique para ver o vídeo">
+            <a class="swipebox" href="https://www.youtube.com/watch?v=sKoY9d5Sao0">
+                <img src="/images/sv/produtos/smartphone-samsung-galaxy-s4-gt-i9515-desbloqueado_100x100-PU909bf_1.jpg" class="img-responsive" alt="TV LED 60&quot; Full HD Samsung FH6003 com Conversor Digital, Função Futebol, Clear Motion Rate 120Hz, Entradas HDMI e USB" title="TV LED 60&quot; Full HD Samsung FH6003 com Conversor Digital, Função Futebol, Clear Motion Rate 120Hz, Entradas HDMI e USB">
+            </a>
+        </figure>
+    </section>
+
+</article>*@

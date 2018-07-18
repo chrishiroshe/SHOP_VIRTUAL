@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="product_store">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>product_store</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>store_id</Input>
+        <Input>product_id</Input>
+        <Input>external_product_id</Input>
+        <Input>name</Input>
+        <Input>description</Input>
+        <Input>url</Input>
+        <Input>image_url</Input>
+        <Input>image_thumb_url</Input>
+        <Input>category_name</Input>
+        <Input>manufacturer_name</Input>
+        <Input>price</Input>
+        <Input>price_low</Input>
+        <Input>installments</Input>
+        <Input>installment_value</Input>
+        <Input>gtin</Input>
+        <Input>created_date</Input>
+        <Input>active</Input>
+        <Input>inactivated_date</Input>
+        <Input>pending</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>product_store</Table>
+      <Inputs>
+        <Input>store_id</Input>
+        <Input>product_id</Input>
+        <Input>external_product_id</Input>
+        <Input>name</Input>
+        <Input>description</Input>
+        <Input>url</Input>
+        <Input>image_url</Input>
+        <Input>image_thumb_url</Input>
+        <Input>category_name</Input>
+        <Input>manufacturer_name</Input>
+        <Input>price</Input>
+        <Input>price_low</Input>
+        <Input>installments</Input>
+        <Input>installment_value</Input>
+        <Input>gtin</Input>
+        <Input>created_date</Input>
+        <Input>active</Input>
+        <Input>inactivated_date</Input>
+        <Input>pending</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>product_store</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>store_id</Input>
+        <Input>product_id</Input>
+        <Input>external_product_id</Input>
+        <Input>name</Input>
+        <Input>description</Input>
+        <Input>url</Input>
+        <Input>image_url</Input>
+        <Input>image_thumb_url</Input>
+        <Input>category_name</Input>
+        <Input>manufacturer_name</Input>
+        <Input>price</Input>
+        <Input>price_low</Input>
+        <Input>installments</Input>
+        <Input>installment_value</Input>
+        <Input>gtin</Input>
+        <Input>created_date</Input>
+        <Input>active</Input>
+        <Input>inactivated_date</Input>
+        <Input>pending</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>product_store</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="PS_UPDATE_RETRIEVE_PRODUCTS">
+      <Summary>Update and Retrieve products</Summary>
+      <Proc>ps_update_retrieve_products</Proc>
+      <Inputs>
+        <Input>store_id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="PS_GET_PRODUCTS_INDEXER_TOTAL">
+      <Summary>Get total</Summary>
+      <Proc>ps_get_products_indexer_total</Proc>
+    </Execution>
+    <Execution cod="PS_GET_PRODUCTS_INDEXER">
+      <Summary>Retrieve products to index</Summary>
+      <Proc>ps_get_products_indexer</Proc>
+      <CommandTimeout>90</CommandTimeout>
+      <Inputs>
+        <Input>itensToRetrieve</Input>
+        <Input>pageSize</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="PS_PENDING_PRODUCTS">
+      <Summary>Update and Retrieve products pending</Summary>
+      <Proc>ps_pending_products</Proc>
+      <Inputs>
+        <Input>active</Input>
+        <Input>storeName</Input>
+        <Input>productName</Input>
+        <Input>beginDate</Input>
+        <Input>endDate</Input>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+  </Storable>
+</Objects>
+

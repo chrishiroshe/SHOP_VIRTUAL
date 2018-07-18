@@ -1,0 +1,97 @@
+﻿@model SV.Site.Facade.SearchResponseEntity
+<div class="col-lg-3 col-md-4 col-sm-12">
+    <aside class="panel-group" id="accordionNo">
+        <!--Categorias-->
+       <!-- <section class="panel panel-default box-model">
+            <div class="panel-heading">
+                <h5 class="panel-title">
+                    Economizar em:
+                </h5>
+            </div>
+            <nav class="panel-body">
+                <ul class="nav nav-pills nav-stacked tree lista-categorias">
+                    <li class="categoria">
+                        <a class="pressed font-title" data-toggle="collapse" href="#saude">
+                            <span class="arrow">
+                                <i class="fa fa-caret-right"></i>
+                            </span>
+                            <h2 class="categoria-title" title="Compare preços de Celulares e Telefones">Saúde</h2>
+                        </a>
+                        <ul id="saude" class="lista-marcas collapse">
+                            <a href="/categoria/saude--aparelho-de-pressao"><li>Aparelho de Pressão</li></a>
+                            <a href="/categoria/saude--balanca"><li>Balança</li></a>
+                            <a href="/categoria/saude--cadeira-de-rodas"><li>Cadeira de Rodas</li></a>
+                            <a href="/categoria/saude--desumidificador"><li>Desumidificador</li></a>
+                            <a href="/categoria/saude--esterilizador---purificador-de-ar"><li>Esterilizador / Purificador de Ar</li></a>
+                            <a href="/categoria/saude--remedios"><li>Remédios</li></a>
+                            <a href="/categoria/saude--umidificador"><li>Umidificador</li></a>
+                        </ul>
+                    </li>
+                    <li class="categoria">
+                        <a class="pressed font-title" data-toggle="collapse" href="#telefonia">
+                            <span class="arrow">
+                                <i class="fa fa-caret-right"></i>
+                            </span>
+                            <h2 class="categoria-title" title="Compare preços de Celulares e Telefones">Telefonia</h2>
+                        </a>
+                        <ul id="telefonia" class="lista-marcas collapse">
+                            <a href="/categoria/telefonia--aparelho-de-telefone"><li>Aparelho de Telefone</li></a>
+                            <a href="/categoria/telefonia--celular-e-smartphone"><li>Celular e Smartphone</li></a>
+                            <a href="/categoria/telefonia--fax"><li>Fax</li></a>
+                            <a href="/categoria/telefonia--walkie-talkie"><li>Walkie Talkie</li></a>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </section>--> <!--Fim do menu de Categorias-->
+    </aside>
+</div>
+
+<!--right column:Results-->
+<article class="col-sm-12 col-lg-9 col-md-8">
+
+    <!-- Sem resultados -->
+    <section class="row categoryProduct xsResponse clearfix container-results-products">
+        <div class="col-xs-12">
+            <h2 class="title-home">Ops! Não encontramos por @(Model.SearchParameters.FreeSearch)...</h2>
+            @*<header class="w100 productFilter clearfix">
+                <div class="pull-left">
+                    <span class="search-filters-title">Mas não se preocupe, temos algumas sugestões pra você continuar navegando:</span>
+                </div>
+            </header>*@
+        </div>
+        @*<article class="item col-sm-4 col-lg-4 col-md-4 col-xs-6 ">
+            <div class="product box-model">
+                <figure class="image">
+                    <a href="/produto/sonysony-bdv-e2100">
+                        <img src="http://thumbs.buscape.com.br/T100x100/__2.65-7e1c98c.jpg" class=" img-responsive" alt="Home Theater Blu - Ray 3D Full HD Sony BDV - E2100 850W 5.1 Canais HDMI, USB, Bluetooth e Função Torcida ( 113268054 )" title="Home Theater Blu - Ray 3D Full HD Sony BDV - E2100 850W 5.1 Canais HDMI, USB, Bluetooth e Função Torcida ( 113268054 )">
+                    </a>
+                </figure>
+                <div class="description">
+                    <h3 class="title">
+                        <a href="/produto/sonysony-bdv-e2100">
+                            Home Theater Blu - Ray 3D Full HD Sony BDV - E2100 850W 5.1 Canais HDMI, USB, Bluetooth e Função Torcida ( 113268054 )
+                        </a>
+                    </h3>
+                    <section class="stars tooltipOn clearfix" data-toggle="tooltip" data-original-title="0 Avaliações"></section>
+
+                    <span class="compare-btn-container hidden-xs">
+                        <button type="button" class="btn btn-sec-reverse btn-xs btn-compare tooltipOn" data-toggle="tooltip" data-original-title="Clique para adicionar a lista de comparação" data-compare="2272">Compare com Detalhes</button>
+                    </span>
+                </div>
+                <section class="price">
+                    <span class="a-partir">A partir de R$ 876,00</span>
+                    <a class="btn btn-primary btn-small btn-pri btn-a-partir tooltipOn" href="/produto/sonysony-bdv-e2100" data-toggle="tooltip" data-original-title="Compare as ofertas">
+                        <i class="glyphicon glyphicon-shopping-cart">
+                        </i>
+                        Compare 2 preços
+                    </a>
+                    <span class="text-small"></span>
+                </section>
+            </div>
+        </article>*@
+    </section>
+    <div class="clearfix"></div>
+
+</article> <!--/.categoryFooter-->
+</div><!--/right column end-->

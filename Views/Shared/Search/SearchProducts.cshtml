@@ -1,0 +1,23 @@
+﻿@model SV.Site.Facade.SearchResponseEntity
+
+<section class="row categoryProduct xsResponse clearfix container-results-products">
+@if (Model.Quantity > 0)
+{ 
+    foreach (var productGroup in Model.GroupedResults)
+    {
+        if (Model.IsResultMatchProducts)
+        {
+            foreach (var product in productGroup)
+            {
+                @Html.Partial("~/Views/Shared/Search/ProductItem.cshtml", product, new ViewDataDictionary { new KeyValuePair<string, object>("GroupCount", 1) })
+            }
+        }
+        else
+        {
+            var itensInGroup = productGroup.Count();
+            var product = productGroup.FirstOrDefault();
+            @Html.Partial("~/Views/Shared/Search/ProductItem.cshtml", product, new ViewDataDictionary{ new KeyValuePair<string, object>("GroupCount", itensInGroup) })
+        }
+    }
+}
+</section>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="store_permission_user">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>store_permission_user</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>store_permission_group_id</Input>
+        <Input>active</Input>
+        <Input>block_date</Input>
+        <Input>store_user_id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>store_permission_user</Table>
+      <Inputs>
+        <Input>store_permission_group_id</Input>
+        <Input>active</Input>
+        <Input>block_date</Input>
+        <Input>store_user_id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>store_permission_user</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>store_permission_group_id</Input>
+        <Input>active</Input>
+        <Input>block_date</Input>
+        <Input>store_user_id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>store_permission_user</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+  </Storable>
+</Objects>

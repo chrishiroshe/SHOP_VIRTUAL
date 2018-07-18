@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="store_click_price_range">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>store_click_price_range</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>store_click_price_id</Input>
+        <Input>range</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>store_click_price_range</Table>
+      <Inputs>
+        <Input>store_click_price_id</Input>
+        <Input>range</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>store_click_price_range</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>store_click_price_id</Input>
+        <Input>range</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>store_click_price_range</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+  </Storable>
+</Objects>

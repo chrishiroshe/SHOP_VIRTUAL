@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="banner_type">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>banner_type</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>name</Input>
+        <Input>active</Input>
+        <Input>height</Input>
+        <Input>width</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>banner_type</Table>
+      <Inputs>
+        <Input>name</Input>
+        <Input>active</Input>
+        <Input>height</Input>
+        <Input>width</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>banner_type</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>name</Input>
+        <Input>active</Input>
+        <Input>height</Input>
+        <Input>width</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>banner_type</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+  </Storable>
+</Objects>

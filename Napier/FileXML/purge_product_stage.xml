@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="purge_product_stage">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>purge_product_stage</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>product_stage_id</Input>
+        <Input>store_id</Input>
+        <Input>external_product_id</Input>
+        <Input>name</Input>
+        <Input>description</Input>
+        <Input>url</Input>
+        <Input>image_url</Input>
+        <Input>image_thumb_url</Input>
+        <Input>category_name</Input>
+        <Input>price</Input>
+        <Input>price_low</Input>
+        <Input>installments</Input>
+        <Input>installment_value</Input>
+        <Input>gtin</Input>
+        <Input>create_date</Input>
+        <Input>purge_date</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>purge_product_stage</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>product_stage_id</Input>
+        <Input>store_id</Input>
+        <Input>external_product_id</Input>
+        <Input>name</Input>
+        <Input>description</Input>
+        <Input>url</Input>
+        <Input>image_url</Input>
+        <Input>image_thumb_url</Input>
+        <Input>category_name</Input>
+        <Input>price</Input>
+        <Input>price_low</Input>
+        <Input>installments</Input>
+        <Input>installment_value</Input>
+        <Input>gtin</Input>
+        <Input>create_date</Input>
+        <Input>purge_date</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>purge_product_stage</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>product_stage_id</Input>
+        <Input>store_id</Input>
+        <Input>external_product_id</Input>
+        <Input>name</Input>
+        <Input>description</Input>
+        <Input>url</Input>
+        <Input>image_url</Input>
+        <Input>image_thumb_url</Input>
+        <Input>category_name</Input>
+        <Input>price</Input>
+        <Input>price_low</Input>
+        <Input>installments</Input>
+        <Input>installment_value</Input>
+        <Input>gtin</Input>
+        <Input>create_date</Input>
+        <Input>purge_date</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>purge_product_stage</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+  </Storable>
+</Objects>

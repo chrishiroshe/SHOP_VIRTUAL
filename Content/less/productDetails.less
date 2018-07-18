@@ -1,0 +1,249 @@
+﻿/*===== Detalhes do Produto =====*/
+
+.product-detail-container{
+    margin-bottom: 15px;
+    .title-product-name{
+        font-size: 23px;
+        line-height: 1.4;
+    }
+    .product-detail-img-wrapper{
+        float: left;
+        img{
+            width: 220px;
+            margin: 0 auto;
+            display: block;
+        }
+    }    
+}
+
+@media (max-width: 767px) {
+    .product-detail-container{
+        .product-actions{
+            text-align: center;
+            margin: 10px auto 20px auto;
+        }
+    }
+    .product-detail-text{
+        text-align: center;
+    }
+    .thumbs-action{
+        display: block;
+    }
+    .alerta-preco{
+        margin-top: 40px;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .product-detail-text{
+        .stars{
+            margin-left: -18px;
+        }
+    }
+}
+
+/* Social */
+
+.product-social-face{
+    float: left;
+    margin-right: 10px;
+}
+
+
+/* Tabs - Produtos */
+
+.nav-tabs {
+	margin-bottom: 15px;
+}
+.product-tab {
+	width: 100%;
+	display: inline-block;
+	clear: both;
+}
+.nav-tabs li a {
+	font-size: 14px;
+	font-weight: 600;
+	margin: 0 0 0 0;
+    .font-title;
+}
+
+
+/* Tabs Mais Detalhes */
+
+.product-detail-tabs{
+    ul{
+        li{
+            background-color: lightness(@color-pri-light, 14%);
+            .radius(4px,4px,0,0) !important;
+            .transition(0.2s, all, linear);
+            margin-bottom: 0;
+            &:hover{
+                background-color: @color-pri-light;
+                &>a{
+                    color: inherit;
+                }
+            }
+            &.active{
+                .title-home;
+                padding: 0px !important;
+                margin-bottom: 0;
+                border-bottom:0;
+                a{
+                    color: #FFF !important;           
+                }
+            }
+        }
+    }
+}
+
+.product-detail-tables{
+    .product-detail-tables-item{
+        margin-bottom: 25px;
+    }    
+}
+
+
+/* Conteúdos Tabs Mais Detalhes */
+.product-more-details{
+    .title{
+        color: @color-pri-dark;
+        font-weight: 600;
+        padding: 0;
+        margin: 10px 0 8px 0;
+    }
+    .subtitle{
+        color: @color-pri-dark;
+        font-weight:normal;
+    }
+}
+
+
+/* Especialista */
+.text-especialista{
+    margin-bottom: 10px;
+    .title-text{
+        margin-top: 30px;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+}
+
+
+/* Avaliação */
+
+.product-avaliacao-item{
+    padding: 0 20px;
+    margin-top: 30px;
+    &:first-child{
+        margin-top: 20px;
+    }
+}
+
+.product-text-avaliacao{
+    margin-top: 5px;
+    margin-bottom: 25px;
+    position: relative;
+    .arrow{
+        position: absolute;
+        top: -15px;
+        font-size: 18px;
+        color: #D6D6D6;
+    }
+}
+
+.user-avaliacao{
+    display: inline-block;
+    background: @color-pri-dark;
+    padding: 6px;
+    margin-right: 15px;
+    border-radius: 50%;
+    overflow: hidden;
+    float: left;    
+    svg{
+        width: 50px;
+        height: 45px;
+        fill: #FFF;
+    }
+}
+
+.avaliacao-classificacao{
+    font-weight: bold;
+    .avaliacao-vote{
+        font-size: 12px;
+        cursor: pointer;
+        margin: 0 5px;
+    }
+}
+
+.container-product-avalie{
+    //text-align: center;
+    .porcent-aprovado{
+        font-size: 35px;
+        display: block;
+        padding-bottom: 0;
+        line-height: 1;
+        font-weight: 600;
+    }
+    .stars{
+        .svg-wrapper{
+            //float: none;
+        }
+    }
+}
+
+#wrapper-avalie-forms{
+    display: none;
+}
+
+
+
+/* Histórico de Preços */
+.product-historico-precos{
+    position:relative;
+}
+
+.grafico-precos-container{
+    width: 100%;
+}
+
+.alerta-preco{
+    padding: 0 20px;
+}
+
+.alerta-preco-content{
+    padding: 0 20px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    .subtitle{
+        font-size:15px;
+    }
+    .menor-preco{
+        span{
+            color: @color-text;
+            font-weight: 600;
+            float: right;
+        }
+    }
+}
+
+
+/* Fotos e Vídeos */
+
+.fotos-videos-wrapper{
+    .title{
+        span{
+
+        }
+    }
+}
+
+.fotos-videos-item{
+    .item;
+    .box-model{
+        padding: 15px 0;
+        img{
+            height: 150px;
+        }
+    }
+}

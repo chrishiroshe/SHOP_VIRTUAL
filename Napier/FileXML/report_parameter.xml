@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="report_parameter">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>report_parameter</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>report_id</Input>
+        <Input>name</Input>
+        <Input>description</Input>
+        <Input>type</Input>
+        <Input>required</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>report_parameter</Table>
+		  <Inputs>
+        <Input>report_id</Input>
+        <Input>name</Input>
+        <Input>description</Input>
+        <Input>type</Input>
+        <Input>required</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>report_parameter</Table>
+		  <Inputs>
+        <Input>id</Input>
+        <Input>report_id</Input>
+        <Input>name</Input>
+        <Input>description</Input>
+        <Input>type</Input>
+        <Input>required</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>report_parameter</Table>
+	   <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+  </Storable>
+</Objects>

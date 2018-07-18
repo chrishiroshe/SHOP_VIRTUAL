@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="service">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>service</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>name</Input>
+        <Input>service_type_id</Input>
+        <Input>active</Input>
+        <Input>create_date</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>service</Table>
+      <Inputs>
+        <Input>name</Input>
+        <Input>service_type_id</Input>
+        <Input>active</Input>
+        <Input>create_date</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>service</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>name</Input>
+        <Input>service_type_id</Input>
+        <Input>active</Input>
+        <Input>create_date</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>product</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+    
+  </Storable>
+</Objects>

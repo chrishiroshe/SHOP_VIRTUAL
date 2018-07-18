@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="order_payment_creditcard">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>order_payment_creditcard</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>order_payment_id</Input>
+        <Input>created_date</Input>
+        <Input>active</Input>
+        <Input>payment_ammount</Input>
+        <Input>creditcard_number</Input>
+        <Input>creditcard_final_number</Input>
+        <Input>expiration_month</Input>
+        <Input>expiration_year</Input>
+        <Input>security_number</Input>
+        <Input>authorization_number</Input>
+        <Input>transaction_number</Input>
+        <Input>transaction_date</Input>
+        <Input>return_message</Input>
+        <Input>creditcard_type</Input>
+        <Input>creditcard_holder</Input>
+        <Input>portions</Input>
+        <Input>portion_ammount</Input>
+        <Input>interest_ammount</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>order_payment_creditcard</Table>
+      <Inputs>
+        <Input>order_payment_id</Input>
+        <Input>created_date</Input>
+        <Input>active</Input>
+        <Input>payment_ammount</Input>
+        <Input>creditcard_number</Input>
+        <Input>creditcard_final_number</Input>
+        <Input>expiration_month</Input>
+        <Input>expiration_year</Input>
+        <Input>security_number</Input>
+        <Input>authorization_number</Input>
+        <Input>transaction_number</Input>
+        <Input>transaction_date</Input>
+        <Input>return_message</Input>
+        <Input>creditcard_type</Input>
+        <Input>creditcard_holder</Input>
+        <Input>portions</Input>
+        <Input>portion_ammount</Input>
+        <Input>interest_ammount</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>order_payment_creditcard</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>order_payment_id</Input>
+        <Input>created_date</Input>
+        <Input>active</Input>
+        <Input>payment_ammount</Input>
+        <Input>creditcard_number</Input>
+        <Input>creditcard_final_number</Input>
+        <Input>expiration_month</Input>
+        <Input>expiration_year</Input>
+        <Input>security_number</Input>
+        <Input>authorization_number</Input>
+        <Input>transaction_number</Input>
+        <Input>transaction_date</Input>
+        <Input>return_message</Input>
+        <Input>creditcard_type</Input>
+        <Input>creditcard_holder</Input>
+        <Input>portions</Input>
+        <Input>portion_ammount</Input>
+        <Input>interest_ammount</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>order_payment_creditcard</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+  </Storable>
+</Objects>

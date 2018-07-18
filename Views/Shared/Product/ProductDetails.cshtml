@@ -1,0 +1,24 @@
+﻿@model SV.Site.Facade.SearchEntities.SearchProductEntity
+@{
+    var groupedDetails = Model.Product.ProductDetail.GroupBy(d => d.detail_group_name).ToDictionary(e => e.Key, e => e.ToList());
+    foreach (KeyValuePair<string, List<SV.Common.Core.ProductDetailModel>> item in groupedDetails)
+    {
+        <article class="product-detail-tables">
+            <section class="product-detail-tables-item">
+                <span>
+                    <h4 class="title">@item.Key</h4>
+                </span>
+                <table class="table table-striped table-hover">
+                    @foreach (var detail in item.Value)
+                    {
+                        <tr>
+                            <td>@detail.detail_name</td>
+                            <td>@detail.description</td>
+                        </tr>
+                    }
+                </table>
+            </section>
+        </article>
+    }
+}
+

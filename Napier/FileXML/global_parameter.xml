@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="global_parameter">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>global_parameter</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>name</Input>
+        <Input>value</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>global_parameter</Table>
+      <Inputs>
+        <Input>name</Input>
+        <Input>value</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>global_parameter</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>name</Input>
+        <Input>value</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>global_parameter</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="PS_GET_GLOBAL_PARAMETER">
+      <Summary>Update and Retrieve products pending</Summary>
+      <Proc>ps_get_global_parameter</Proc>
+      <Inputs>
+        <Input>parameterName</Input>
+        <Input>id</Input>
+        <Input>itensToRetrieve</Input>
+        <Input>page</Input>
+      </Inputs>
+    </Execution>
+  </Storable>
+</Objects>

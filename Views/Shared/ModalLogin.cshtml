@@ -1,0 +1,59 @@
+﻿    <!-- Modal Login start -->
+@model SV.Site.UI.ViewModels.LoginViewModel
+    <div class="modal-dialog" >
+        <section class="modal-content">
+            <header class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times; </button>
+                <h3 class="modal-title-site text-center"> Faça o Login </h3>
+            </header>
+            <div class="modal-body">
+            @using (Html.BeginForm("SignIn", "Login", FormMethod.Post, new { id = "frmLogin" }))
+            {
+                <span id="spanerror" style="display:none" class="field-validation-error label-danger" data-valmsg-for="Name" data-valmsg-replace="true"></span>
+                if (Model.lstError != null && Model.lstError.Count > 0 && Model.Success == false)
+                {
+                    <span class="field-validation-error label-danger" data-valmsg-for="Name" data-valmsg-replace="true">@Model.lstError.FirstOrDefault().ErrorMessage</span>
+                }
+                else if (Model.Success)
+                {
+                    <span id="spansuccess" class="field-validation-success label-success" data-valmsg-for="Name" data-valmsg-replace="true">Acesso efetuado com sucesso.</span>
+                }
+                <div class="form-group login-username">
+                    <div>
+                        @Html.TextBoxFor(d => d.Email, new { maxlength = 150, @class = "form-control input", placeholder = "Digite seu Email", id = "login-user" })
+                        @Html.ValidationMessageFor(m => m.Email, String.Empty, new { @class = "label-danger" })
+                        @*<input name="login-user" id="login-user" class="form-control input" size="100" placeholder="Digite seu Email" type="text">*@
+                    </div>
+                </div>
+                <div class="form-group login-password">
+                    <div>
+                        @Html.PasswordFor(d => d.Password, new { maxlength = 10, @class = "form-control input", placeholder = "Digite sua Senha", id = "login-password" })
+                        @Html.ValidationMessageFor(m => m.Password, String.Empty, new { @class = "label-danger" })
+                        @*<input name="login-password" id="login-password" class="form-control input" size="20" placeholder="Digite sua Senha" type="password">*@
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <input name="submit" id="btnLoginExists" class="btn btn-block btn-lg btn-primary btn-modal-sec" value="LOGIN" type="button">
+                    </div><br />
+                    <div class="control-group"> <a class="fb_button btn  btn-block btn-lg btn-login-face fb-logar" href="#"> Entrar com Facebook </a> </div>
+                </div>
+                @Html.HiddenFor(d => d.code, new {  id = "code" })
+                @Html.HiddenFor(d => d.code_type, new { id = "code_type" })
+                <!--userForm-->
+            }
+            </div>
+            <footer class="modal-footer">
+                <p class="text-center">
+                    Novo aqui? <a data-toggle="modal" data-dismiss="modal" href="#ModalSignup"> Cadastre-se. </a> <br>
+                    <a href="forgot-password.html"> Esqueceu sua senha? </a>
+                </p>
+            </footer>
+        </section>
+        <!-- /.modal-content -->
+
+    </div>
+    <!-- /.modal-dialog -->
+
+
+<!-- /.Modal Login -->

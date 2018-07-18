@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="report">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>report</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>create_date</Input>
+        <Input>description</Input>
+        <Input>export</Input>
+        <Input>name</Input>
+        <Input>query</Input>
+        <Input>active</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+		  <Table>report</Table>
+      <Inputs>
+        <Input>create_date</Input>
+        <Input>description</Input>
+        <Input>export</Input>
+        <Input>name</Input>
+        <Input>query</Input>
+        <Input>active</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+	    <Table>report</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>create_date</Input>
+        <Input>description</Input>
+        <Input>export</Input>
+        <Input>name</Input>
+        <Input>query</Input>
+        <Input>active</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>report</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+	 <Execution cod="sp_get_report">
+		  <Summary>sp_GetReport Summary</Summary>
+		  <Proc>sp_get_report</Proc>
+		  <Inputs>
+			  <Input>report_id</Input>
+			  <Input>parameter</Input>
+		  </Inputs>
+	  </Execution>
+  </Storable>
+</Objects>

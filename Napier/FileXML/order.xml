@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="order">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>order</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>total_ammount</Input>
+        <Input>discount_ammount</Input>
+        <Input>interest_ammount</Input>
+        <Input>net_ammount</Input>
+        <Input>active</Input>
+        <Input>created_date</Input>
+        <Input>order_history_id</Input>
+        <Input>origin_type</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>order</Table>
+      <Inputs>
+        <Input>total_ammount</Input>
+        <Input>discount_ammount</Input>
+        <Input>interest_ammount</Input>
+        <Input>net_ammount</Input>
+        <Input>active</Input>
+        <Input>created_date</Input>
+        <Input>order_history_id</Input>
+        <Input>origin_type</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>order</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>total_ammount</Input>
+        <Input>discount_ammount</Input>
+        <Input>interest_ammount</Input>
+        <Input>net_ammount</Input>
+        <Input>active</Input>
+        <Input>created_date</Input>
+        <Input>order_history_id</Input>
+        <Input>origin_type</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>order</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+  </Storable>
+</Objects>

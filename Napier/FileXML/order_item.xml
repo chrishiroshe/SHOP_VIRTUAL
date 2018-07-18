@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="order_item">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>order_item</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>order_id</Input>
+        <Input>quantity</Input>
+        <Input>ammount</Input>
+        <Input>service_id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>order_item</Table>
+      <Inputs>
+        <Input>order_id</Input>
+        <Input>quantity</Input>
+        <Input>ammount</Input>
+        <Input>service_id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>order_item</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>order_id</Input>
+        <Input>quantity</Input>
+        <Input>ammount</Input>
+        <Input>service_id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>order_item</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+  </Storable>
+</Objects>

@@ -1,0 +1,37 @@
+﻿.searchArea 
+{
+    width: 700px; 
+    margin-left: 100px; 
+    margin-top: 5px; 
+    height: 43px!important; 
+    border-radius: 10px!important; 
+    -moz-border-radius: 10px!important; 
+    -khtml-border-radius: 10px!important; 
+    -webkit-border-radius: 10px!important;
+}
+
+.btnSearchArea
+{
+    margin-left:5px;
+}
+
+.title-home-recomended
+{
+    margin-top: 45px;
+}
+
+.panel-heading
+{
+    border:4px solid #9b59b6!important;
+    background-color:#9b59b6!important ;
+}
+
+.collapseWill
+{
+    color:#ffffff!important;
+}
+
+.category-level-2
+{
+    border-left:none!important;
+}

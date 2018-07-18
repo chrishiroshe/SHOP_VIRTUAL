@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="order_history">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>order_history</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>status_id</Input>
+        <Input>order_id</Input>
+        <Input>history_date</Input>
+        <Input>comments</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>order_history</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>order_id</Input>
+        <Input>history_date</Input>
+        <Input>comments</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>order_history</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>status_id</Input>
+        <Input>order_id</Input>
+        <Input>history_date</Input>
+        <Input>comments</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>order_history</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+  </Storable>
+</Objects>

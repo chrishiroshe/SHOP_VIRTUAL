@@ -1,0 +1,100 @@
+﻿@model SV.Site.Facade.SearchResponseEntity
+<div class="col-lg-3 col-md-4 col-sm-12">
+    <aside class="panel-group" id="accordionNo">
+        <!--Categorias-->
+        <section class="panel panel-default box-model">
+            <div class="panel-heading">
+                <h5 class="panel-title">
+                    Pesquise por Filtros:
+                </h5>
+            </div>
+            <nav class="panel-body">
+                <ul class="nav nav-pills nav-stacked tree lista-categorias">
+                    <li class="categoria">
+                        <a class="pressed font-title title-filter-preco" data-toggle="collapse" href="#filter-preco">
+                            <span class="arrow">
+                                <i class="fa fa-caret-right"></i>
+                            </span>
+                            <h2 class="categoria-title" title="Pesquise por preço">Preço</h2>
+                        </a>
+                        <ul id="filter-preco" class="lista-geral collapse">
+                            @{
+                                var prices = Model.Filters[SV.Common.Entities.SearchFilterType.Price];
+                                foreach (var item in prices)
+                                {
+                                    <a href="@Utils.SearchFiltersUrl(item.Url)">
+                                        <li>
+                                            @item.Description
+                                            <span class="badge pull-right">@item.Count</span><!--Cor/hover badge-->
+                                        </li>
+                                    </a><!-- Fazer o style de item SELECTED para os filtros -->
+                                }
+                            }
+                            <li class="no-bg no-border">
+                                Escolha o valor mínimo-máximo (R$):
+                                <div id="slider"></div>
+                            </li>
+                        </ul>
+                        
+                    </li>
+                    @{
+                        var brands = Model.Filters[SV.Common.Entities.SearchFilterType.Brand];
+                        if (brands.Count > 0)
+                        {
+                            <li class="categoria">
+                                <a class="pressed font-title" data-toggle="collapse" href="#filter-marca">
+                                    <span class="arrow">
+                                        <i class="fa fa-caret-right"></i>
+                                    </span>
+                                    <h2 class="categoria-title" title="Pesquise por Marca">Marca</h2>
+                                </a>
+                                <ul id="filter-marca" class="lista-geral collapse">
+                                    @foreach (var item in brands)
+                                    {
+                                        <a href="@Utils.SearchFiltersUrl(item.Url)">
+                                            <li>
+                                                @item.Description
+                                                <span class="badge pull-right">@item.Count</span>
+                                            </li>
+                                        </a>
+                                    }
+                                </ul>
+                            </li>
+                        }
+                    }
+
+                    @{
+                        var details = Model.FiltersDynamic;
+                        if (details.Count > 0)
+                        {
+                            foreach (var groupDetail in details)
+                            {
+                                <li class="categoria">
+                                    <a class="pressed font-title" data-toggle="collapse" href="@string.Format("#filter-{0}", @groupDetail.Key.ToLower().Replace(" ", "-"))">
+                                        <!--retirar espaço-->
+                                        <span class="arrow">
+                                            <i class="fa fa-caret-right"></i>
+                                        </span>
+                                        <h2 class="categoria-title" title="Pesquise por @groupDetail.Key">@groupDetail.Key</h2>
+                                    </a>
+                                    <ul id="@string.Format("filter-{0}", @groupDetail.Key.ToLower().Replace(" ", "-"))" class="lista-geral @string.Format(" lista-{0}", @groupDetail.Key.ToLower().Replace(" ", "-") ) collapse">
+                                        @foreach (var item in groupDetail.Value)
+                                        {
+                                            <a href="@Utils.SearchFiltersUrl(item.Url)">
+                                                <li>
+                                                    @item.Description
+                                                    <span class="badge pull-right">@item.Count</span>
+                                                </li>
+                                            </a>
+                                        }
+                                    </ul>                                    
+                                </li>
+                            }
+                        }
+                    }
+
+                </ul>
+            </nav>
+        </section> <!--Fim do menu de Categorias-->
+    </aside>
+</div>

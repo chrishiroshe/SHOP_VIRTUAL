@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="store_config">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>store_config</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>store_id</Input>
+        <Input>xml_virtual_path</Input>
+        <Input>xml_credential_user</Input>
+        <Input>xml_credential_pwd</Input>
+        <Input>update_frequency</Input>
+        <Input>last_executed_date</Input>
+        <Input>min_click_price</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>store_config</Table>
+      <Inputs>
+        <Input>store_id</Input>
+        <Input>xml_virtual_path</Input>
+        <Input>xml_credential_user</Input>
+        <Input>xml_credential_pwd</Input>
+        <Input>update_frequency</Input>
+        <Input>last_executed_date</Input>
+        <Input>min_click_price</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>store_config</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>store_id</Input>
+        <Input>xml_virtual_path</Input>
+        <Input>xml_credential_user</Input>
+        <Input>xml_credential_pwd</Input>
+        <Input>update_frequency</Input>
+        <Input>last_executed_date</Input>
+        <Input>min_click_price</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>store_config</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+  </Storable>
+</Objects>

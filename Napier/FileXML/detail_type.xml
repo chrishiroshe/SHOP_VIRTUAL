@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="detail_type">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>detail_type</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>name</Input>
+        <Input>active</Input>
+        <Input>detail_group_id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>detail_type</Table>
+      <Inputs>
+        <Input>name</Input>
+        <Input>active</Input>
+        <Input>detail_group_id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>detail_type</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>name</Input>
+        <Input>active</Input>
+        <Input>detail_group_id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>detail_type</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="PS_GET_DETAIL">
+      <Summary>Update and Retrieve products pending</Summary>
+      <Proc>ps_get_detail</Proc>
+      <Inputs>
+        <Input>active</Input>
+        <Input>detailName</Input>
+        <Input>detailGroupName</Input>
+        <Input>id</Input>
+        <Input>itensToRetrieve</Input>
+        <Input>page</Input>
+      </Inputs>
+    </Execution>
+  </Storable>
+</Objects>

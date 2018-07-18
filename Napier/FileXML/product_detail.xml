@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="product_detail">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>product_detail</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>description</Input>
+        <Input>product_id</Input>
+        <Input>detail_id</Input>
+        <Input>active</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>product_detail</Table>
+      <Inputs>
+        <Input>description</Input>
+        <Input>product_id</Input>
+        <Input>detail_id</Input>
+        <Input>active</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>product_detail</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>description</Input>
+        <Input>product_id</Input>
+        <Input>detail_id</Input>
+        <Input>active</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>product_detail</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="PS_GET_PRODUCT_DETAILS">
+      <Summary>Get Product Details</Summary>
+      <Proc>ps_get_product_details</Proc>
+      <Inputs>
+        <Input>product_id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="PS_GET_PRODUCT_DETAILS_VALUE">
+      <Summary>Get Product Details</Summary>
+      <Proc>ps_get_product_details_value</Proc>
+      <Inputs>
+        <Input>product_id</Input>
+      </Inputs>
+    </Execution>
+  </Storable>
+</Objects>

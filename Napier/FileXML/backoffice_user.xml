@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="backoffice_user">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>backoffice_user</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>name</Input>
+        <Input>phone_number</Input>
+        <Input>email</Input>
+        <Input>password</Input>
+        <Input>register_date</Input>
+        <Input>active</Input>
+        <Input>document_number_cpf</Input>
+        <Input>gender</Input>
+        <Input>block_date</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>backoffice_user</Table>
+      <Inputs>
+        <Input>name</Input>
+        <Input>phone_number</Input>
+        <Input>email</Input>
+        <Input>password</Input>
+        <Input>register_date</Input>
+        <Input>active</Input>
+        <Input>document_number_cpf</Input>
+        <Input>gender</Input>
+        <Input>block_date</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <IgnoreUpdateControl>true</IgnoreUpdateControl>
+      <Table>backoffice_user</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>name</Input>
+        <Input>phone_number</Input>
+        <Input>email</Input>
+        <Input>password</Input>
+        <Input>register_date</Input>
+        <Input>active</Input>
+        <Input>document_number_cpf</Input>
+        <Input>gender</Input>
+        <Input>block_date</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>backoffice_user</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+  </Storable>
+</Objects>

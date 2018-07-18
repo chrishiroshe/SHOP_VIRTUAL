@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="backoffice_permission_user">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>backoffice_permission_user</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>backoffice_permission_group_id</Input>
+        <Input>active</Input>
+        <Input>block_date</Input>
+        <Input>backoffice_user_id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>backoffice_permission_user</Table>
+      <Inputs>
+        <Input>backoffice_permission_group_id</Input>
+        <Input>active</Input>
+        <Input>block_date</Input>
+        <Input>backoffice_user_id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>backoffice_permission_user</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>backoffice_permission_group_id</Input>
+        <Input>active</Input>
+        <Input>block_date</Input>
+        <Input>backoffice_user_id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>backoffice_permission_user</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="PD_DELETE_PERMISSION_GROUP_USER">
+      <Summary>Delete products</Summary>
+      <Proc>pd_delete_permission_group_user</Proc>
+      <Inputs>
+        <Input>backoffice_user_id</Input>
+      </Inputs>
+    </Execution>
+  </Storable>
+</Objects>

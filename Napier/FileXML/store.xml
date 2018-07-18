@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="store">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>store</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>name</Input>
+        <Input>fantasy_name</Input>
+        <Input>document_number_cnpj</Input>
+        <Input>active</Input>
+        <Input>register_date</Input>
+        <Input>open_date</Input>
+        <Input>site_url</Input>
+        <Input>logo_url</Input>
+        <Input>inactive_date</Input>
+        <Input>is_lomadee</Input>
+        <Input>lomadee_id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>store</Table>
+      <Inputs>
+        <Input>name</Input>
+        <Input>fantasy_name</Input>
+        <Input>document_number_cnpj</Input>
+        <Input>active</Input>
+        <Input>register_date</Input>
+        <Input>open_date</Input>
+        <Input>site_url</Input>
+        <Input>logo_url</Input>
+        <Input>inactive_date</Input>
+        <Input>is_lomadee</Input>
+        <Input>lomadee_id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>store</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>name</Input>
+        <Input>fantasy_name</Input>
+        <Input>document_number_cnpj</Input>
+        <Input>active</Input>
+        <Input>register_date</Input>
+        <Input>open_date</Input>
+        <Input>site_url</Input>
+        <Input>logo_url</Input>
+        <Input>inactive_date</Input>
+        <Input>is_lomadee</Input>
+        <Input>lomadee_id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>store</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+  </Storable>
+</Objects>

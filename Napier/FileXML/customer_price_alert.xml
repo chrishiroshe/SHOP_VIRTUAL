@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="customer_price_alert">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>customer_price_alert</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>customer_id</Input>
+        <Input>product_id</Input>
+        <Input>price</Input>
+        <Input>active</Input>
+        <Input>created_date</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>customer_price_alert</Table>
+      <Inputs>
+        <Input>customer_id</Input>
+        <Input>product_id</Input>
+        <Input>price</Input>
+        <Input>active</Input>
+        <Input>created_date</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>customer_price_alert</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>customer_id</Input>
+        <Input>product_id</Input>
+        <Input>price</Input>
+        <Input>active</Input>
+        <Input>created_date</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>customer_price_alert</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+  </Storable>
+</Objects>

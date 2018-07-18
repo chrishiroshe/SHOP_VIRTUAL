@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="order_payment">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>order_payment</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>order_id</Input>
+        <Input>payment_type</Input>
+        <Input>payment_value</Input>
+        <Input>payment_date</Input>
+        <Input>payment_status_type</Input>
+        <Input>active</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>order_payment</Table>
+      <Inputs>
+        <Input>order_id</Input>
+        <Input>payment_type</Input>
+        <Input>payment_value</Input>
+        <Input>payment_date</Input>
+        <Input>payment_status_type</Input>
+        <Input>active</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>order_payment</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>order_id</Input>
+        <Input>payment_type</Input>
+        <Input>payment_value</Input>
+        <Input>payment_date</Input>
+        <Input>payment_status_type</Input>
+        <Input>active</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>order_payment</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+  </Storable>
+</Objects>

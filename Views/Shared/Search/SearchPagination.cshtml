@@ -1,0 +1,21 @@
+﻿@model SV.Site.Facade.SearchResponseEntity
+@if (Model.TotalPages > 0)
+{ 
+<nav class="pagination pull-left no-margin-top">
+    <ul class="pagination no-margin-top">
+        <li><a href="@Utils.SearchFiltersUrl("pagina", (Model.CurrentPage == 1 ? Model.CurrentPage : Model.CurrentPage -1))">< Anterior</a></li>
+        @{
+            var qtdPageNumbers = Model.TotalPages < 6 ? Model.TotalPages : 6;
+            for (var page = Model.CurrentPage; page <= qtdPageNumbers; page++)
+            {
+                <li @(page == Model.CurrentPage ? "class=\"active\"" : "")><a href="@Utils.SearchFiltersUrl("pagina", page)">@page</a></li>
+            }
+        }
+        <li><a href="@Utils.SearchFiltersUrl("pagina", (Model.CurrentPage <= Model.TotalPages ? Model.CurrentPage+1 : Model.CurrentPage))">Proxima ></a></li>
+    </ul>
+</nav>
+
+<div class="pull-right pull-right  col-sm-4 col-xs-12 no-padding text-right text-left-xs">
+    <p>Página @Model.CurrentPage de @Model.TotalPages</p>
+</div>
+}

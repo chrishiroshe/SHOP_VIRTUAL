@@ -1,0 +1,58 @@
+﻿@model SV.Common.Core.ProductModel
+@using SV.Common.Framework;
+@{
+    var globalization = new System.Globalization.CultureInfo("pt-BR");
+}
+<article class="item col-sm-4 col-xs-6">
+    <div class="product box-model">
+        @*TODO:IMPLEMENTAR
+            <div class="flag flag-baixou">
+                <span class="label">Baixou</span>
+            </div>
+        **@
+        <figure class="image">
+            <a href="/produto/@StringHelpers.RemoveDiacritics(Model.ProductUrl.product_url)">
+                <img src="@Model.image_url" class="img-responsive" alt="@Model.name" title="@Model.name">
+            </a>
+        </figure>
+        <div class="description">
+            <h3 class="title"><a href="/produto/@Model.ProductUrl.product_url">@Model.name</a></h3>
+            @{
+                Int32 qtdReviews = 0;
+                if (Model.ProductReview != null)
+                {
+                    qtdReviews = Model.ProductReview.Count;
+                    var avgReviews = 5;//Model.ProductReview.GetMedian();
+                    <section class="stars stars-home tooltipOn clearfix" data-toggle="tooltip" data-original-title="@qtdReviews Avaliações">
+                        @for (var qtd = 0; qtd < avgReviews; qtd++)
+                        {
+                            <span class="svg-wrapper">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                     width="50px" height="50px" viewBox="0 0 510 510" style="enable-background:new 0 0 510 510;" xml:space="preserve">
+                                    <g id="star">
+                                        <polygon points="255,402.212 412.59,497.25 370.897,318.011 510,197.472 326.63,181.738 255,12.75 183.371,181.738 0,197.472
+			                                                139.103,318.011 97.41,497.25 		" />
+	                                </g>
+                                </svg>
+                            </span>
+                        }
+                    </section>
+                }
+            }
+        </div>
+        <section class="price">
+            <span class="a-partir a-partir-home">A partir de</span>
+            <a class="btn btn-primary btn-small btn-pri btn-a-partir tooltipOn" href="#" data-toggle="tooltip" data-original-title="Compare as ofertas">
+                R$ @Model.price_low.ToString("N2", globalization)
+                <i class=" fa fa-arrow-circle-right">
+                </i>
+            </a>
+            <!--span class="text-small">em 19 lojas</span-->
+        </section>
+        @*<div class="action-control">
+                <a class="btn btn-primary">
+                    <span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Add to cart </span>
+                </a>
+            </div>*@
+    </div>
+</article><!--/.item-->

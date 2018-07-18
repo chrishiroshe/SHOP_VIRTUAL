@@ -1,0 +1,47 @@
+﻿@model SV.Site.Facade.SearchResponseEntity
+@using SV.Common.Framework;
+<aside class="panel-group resultados-categorias-wrapper" id="">
+    <!--Categorias-->
+    <section class="panel panel-default box-model">
+        <div class="panel-heading">
+            <h5 class="panel-title">
+                Categorias:
+            </h5>
+        </div>
+        <nav class="panel-body">
+            <ul class="nav nav-pills nav-stacked tree lista-categorias lista-resultados-categorias">
+                <li class="categoria">
+                    <ul id="celulares-e-telefones" class="lista-marcas collapse in">
+                        @foreach (var category in Model.Categories)
+                        {
+                            <a href="@category.CategoryUrl">
+                            	<li>@category.name</li>
+                            </a>
+                        }
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </section> <!--Fim do menu de Categorias-->
+</aside>
+
+@*<div class="panel-group" id="accordionNo">
+    <!--Filters-->
+  <div class="panel panel-default">
+        <div id="collapseBrand" class="panel-collapse collapse in">
+            <div class="panel-body smoothscroll maxheight300">
+                @foreach(var category in Model.Categories)
+                { 
+                <div class="block-element">
+                    <label>
+                        @category.name.ToUpper()
+                    </label>
+                </div>
+                }
+                <div class="block-element">
+                    <label> &nbsp; </label> <!-- keep it blank // -->
+                </div>
+            </div>
+        </div>
+    </div> <!--/brand panel end-->
+ </div>*@

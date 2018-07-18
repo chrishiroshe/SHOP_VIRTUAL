@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="customer">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>customer</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>name</Input>
+        <Input>register_date</Input>
+        <Input>email</Input>
+        <Input>password</Input>
+        <Input>optin_active</Input>
+        <Input>active</Input>
+        <Input>block_date</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>customer</Table>
+      <Inputs>
+        <Input>name</Input>
+        <Input>register_date</Input>
+        <Input>email</Input>
+        <Input>password</Input>
+        <Input>optin_active</Input>
+        <Input>active</Input>
+        <Input>block_date</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>customer</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>name</Input>
+        <Input>register_date</Input>
+        <Input>email</Input>
+        <Input>password</Input>
+        <Input>optin_active</Input>
+        <Input>active</Input>
+        <Input>block_date</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>customer</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="PS_VERIFY_CUSTOMER_SOCIAL">
+      <Summary>Verify if the user exists in social medias</Summary>
+      <Proc>ps_verify_customer_social</Proc>
+      <Inputs>
+        <Input>token</Input>
+        <Input>social_type</Input>
+        <Input>email</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="PS_LOGIN_CUSTOMER">
+      <Summary>Login</Summary>
+      <Proc>ps_login_customer</Proc>
+      <Inputs>
+        <Input>user</Input>
+        <Input>password</Input>
+        <Input>social_token</Input>
+        <Input>social_type</Input>
+      </Inputs>
+    </Execution>    
+  </Storable>
+</Objects>

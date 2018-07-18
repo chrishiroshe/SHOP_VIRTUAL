@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="customer_social">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>customer_social</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>customer_id</Input>
+        <Input>social_type_id</Input>
+        <Input>social_token</Input>
+        <Input>active</Input>
+        <Input>inactive_date</Input>
+        <Input>token_expiration_date</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>customer_social</Table>
+      <Inputs>
+        <Input>customer_id</Input>
+        <Input>social_type_id</Input>
+        <Input>social_token</Input>
+        <Input>active</Input>
+        <Input>inactive_date</Input>
+        <Input>token_expiration_date</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>customer_social</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>customer_id</Input>
+        <Input>social_type_id</Input>
+        <Input>social_token</Input>
+        <Input>active</Input>
+        <Input>inactive_date</Input>
+        <Input>token_expiration_date</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>customer_social</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+  </Storable>
+</Objects>

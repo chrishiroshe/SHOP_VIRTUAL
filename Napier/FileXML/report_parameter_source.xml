@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Objects>
+  <Storable name="report_parameter_source">
+    <Execution cod="SEL">
+      <Summary>SEL Summary</Summary>
+      <Table>report_parameter_source</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>report_parameter_id</Input>
+        <Input>query</Input>
+        <Input>field_id</Input>
+        <Input>filed_text</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="INS">
+      <Summary>INS Summary</Summary>
+      <Table>report_parameter_source</Table>
+      <Inputs>
+        <Input>report_parameter_id</Input>
+        <Input>query</Input>
+        <Input>field_id</Input>
+        <Input>filed_text</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="UPD">
+      <Summary>UPD Summary</Summary>
+      <Table>report_parameter_source</Table>
+      <Inputs>
+        <Input>id</Input>
+        <Input>report_parameter_id</Input>
+        <Input>query</Input>
+        <Input>field_id</Input>
+        <Input>filed_text</Input>
+      </Inputs>
+    </Execution>
+    <Execution cod="DEL">
+      <Summary>DEL Summary</Summary>
+      <Table>report_parameter_source</Table>
+      <Inputs>
+        <Input>id</Input>
+      </Inputs>
+    </Execution>
+	  <Execution cod="sp_GetParametroFonte">
+		  <Summary>dbo.sp_get_report_parameter_source Summary</Summary>
+		  <Proc>sp_get_report_parameter_source</Proc>
+		  <Inputs>
+			  <Input>parameter_id</Input>
+		  </Inputs>
+	  </Execution>
+  </Storable>
+</Objects>

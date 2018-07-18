@@ -1,0 +1,120 @@
+﻿<footer class="footer" id="footer">
+    <article class="container">
+        <div class="row">
+            <section class="contato-wrapper footer-wrapper col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                <h4 class="font-title title">
+                    <span class="arrow">
+                        <i class="fa fa-caret-right"></i>
+                    </span>
+                    Contato
+                </h4>
+                <ul>
+                    <li class="supportLi">
+                        <h5>
+                            <a class="inline" href="callto:+551108001234567">
+                                <strong> <i class="fa fa-phone"> </i> 11 0800 123 4567 </strong>
+                            </a>
+                        </h5>
+                        <h5>
+                            <a class="inline link-mail" href="contato@shoppingvirtual.com.br">
+                                <i class="fa fa-envelope-o"> </i> contato@shoppingvirtual.com.br
+                            </a>
+                        </h5>
+                    </li>
+                </ul>
+            </section>
+            <section class="footer-wrapper col-lg-2 col-md-2 col-sm-4 col-xs-6">
+                <h4 class="font-title title">
+                    <span class="arrow">
+                        <i class="fa fa-caret-right"></i>
+                    </span>
+                    Navegue
+                </h4>
+                <nav>
+                    <ul>
+                        <li> @Html.ActionLink("Home","Index","Home") </li>
+                        <li> <a href="/categoria/eletronicos"> Eletrônicos </a> </li>
+                        <li> <a href="/categoria/telefonia"> Telefonia </a> </li>
+                        <li> <a href="/categoria/eletrodomesticos"> Eletrodomésticos </a> </li>
+                    </ul>
+                </nav>
+            </section>
+            <section class="footer-wrapper col-lg-2 col-md-2 col-sm-4 col-xs-6">
+                <h4 class="font-title title">
+                    <span class="arrow">
+                        <i class="fa fa-caret-right"></i>
+                    </span>
+                    Informações
+                </h4>
+                <nav>
+                    <ul>
+                        <li> <a href="#" data-toggle="modal" data-target="#ModalAboutUs"> Sobre Nós </a> </li>
+                        <li> <a href="#" data-toggle="modal" data-target="#ModalPrivacyPolicy">
+                            Política de Privacidade
+                        </a> </li>
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#ModalTerms">
+                                Termos &amp; Condições
+                            </a>
+                        </li>
+                        <!---li> <a href="contact-us-2.html"> Afilie-se </a> </!--li-->
+                      
+                    </ul>
+                </nav>
+            </section>
+            <section class="footer-wrapper col-lg-2 col-md-2 col-sm-4 col-xs-6">
+                <h4 class="font-title title">
+                    <span class="arrow">
+                        <i class="fa fa-caret-right"></i>
+                    </span>
+                    Minha Conta
+                </h4>
+                <nav>
+                    <ul>
+                        <li> <a href="#" data-toggle="modal" data-target="#ModalLogin"> Entrar </a> </li>
+                        @*<li> <a href="account.html"> Minha Conta </a> </li>
+                        <li> <a href="wishlist.html"> Lista de Desejos </a> </li>*@
+                    </ul>
+                </nav>
+            </section>
+            <section class="footer-wrapper col-lg-3 col-md-3 col-sm-6 col-xs-12 ">
+                <h4 class="font-title title">
+                    <span class="arrow">
+                        <i class="fa fa-caret-right"></i>
+                    </span>
+                    Inscreva-se
+                </h4>
+                <ul>
+                    <li>Cadastre-se e receba nossas promoções.</li>
+                    <li>
+                        <div class="input-append newsLatterBox text-center">
+                            <span id="spanerrornews" style="display:none" class="field-validation-error label-danger" data-valmsg-for="Name" data-valmsg-replace="true"></span>
+                            <input type="text" class="full text-left font-title" id="txtNewsEmail" placeholder="Digite seu Email ">
+                            <button class="btn btn-pri" id="btnInscrevaNews" type="button"> Inscreva-se <i class="fa fa-arrow-circle-right"></i> </button>
+                        </div>
+                    </li>
+                </ul>
+                <nav>
+                    <ul class="social">
+                        <li> <a href="http://youtube.com" target="_blank"> <i class="fa fa-youtube"> &nbsp; </i> </a> </li>
+                        <li> <a href="http://twitter.com" target="_blank"> <i class="fa fa-twitter"> &nbsp; </i> </a> </li>
+                        <li> <a href="http://facebook.com" target="_blank"> <i class=" fa fa-facebook"> &nbsp; </i> </a> </li>                        
+                        @*<li> <a href="https://plus.google.com" target="_blank"> <i class="fa fa-google-plus"> &nbsp; </i> </a> </li>
+                        <li> <a href="http://pinterest.com" target="_blank"> <i class="fa fa-pinterest"> &nbsp; </i> </a> </li>*@
+                        
+                    </ul>
+                </nav>
+            </section>
+        </div>
+        <!--/.row-->
+    </article>
+    <!--/.container-->
+</footer>
+<!--/.footer-->
+
+<div class="footer-bottom">
+    <div class="container">
+        <p class="pull-left"> &copy; Shopping Virtual 2015. Todos os direitos reservados. </p>
+    </div>
+</div>
+<!--/.footer-bottom-->

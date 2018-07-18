@@ -1,0 +1,170 @@
+﻿@using SV.Common.Core;
+@model SV.Site.Facade.SearchResponseEntity
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var culture = new System.Globalization.CultureInfo("en-US");
+}
+
+<main class="container main-container headerOffset" rel="search" id="main-container">
+    <div class="row">
+        @if (Model.Quantity > 0)
+        {
+        <!--left column:Filters-->
+            @Html.Partial("~/Views/Shared/Search/SearchFilters.cshtml", Model)
+        <!--right column:Results-->
+            <article class="col-sm-12 col-lg-9 col-md-8">
+                <nav class="breadcrumb-wrapper hidden-xs">
+                    <ol class="breadcrumb">
+                        <li><a href="/">Home</a></li>
+                        @{
+            if (Model.CategoryID > 0)
+            {
+                var breadCrumb = CategoryModel.GetCategoryHierarchy(CategoryModel.GetCategoryByID(Model.CategoryID));
+                if (breadCrumb.Count > 1)
+                {
+                    foreach (var cat in breadCrumb.OrderByDescending(d => d.Key).ToList())
+                    {
+                        <li><a href="@cat.Value.CategoryUrl">@cat.Value.name</a></li>
+                    }
+                }
+                else
+                {
+                    <li><a href="@Model.CategoryUrl">@Model.CategoryName.ToUpper().Replace("-", " ")</a></li>
+                }
+            }
+                        }
+                    </ol>
+
+                </nav>
+                <aside class="w100 clearfix category-top">
+                    <h2 class="title-home">Resultados para: <strong>@(string.IsNullOrEmpty(Model.CategoryName) ? Model.SearchParameters.CategorySearch : Model.CategoryName.ToUpper())</strong></h2>
+                    @if (Model.FiltersSelected != null && Model.FiltersSelected.Count > 0)
+                    {
+                        <div class="w100">
+                            <h4 class="search-filters-title">Filtros Selecionados:</h4>
+                            <section class="filters-selecteds-list">
+                                @{
+                        foreach (var item in Model.FiltersSelected)
+                        {
+                            <ul class="list-inline list-filters">
+                                <li class="title">@item.Key:</li>
+                                @foreach (var valor in item.Value)
+                                {
+                                    <li class="label label-default">
+                                        @valor
+                                        <span class="close-filter tooltipOn" data-toggle="tooltip" data-original-title="Remover filtro" data-bind="@Utils.RemoveQueryStringKey(item.Key)">x</span>
+                                    </li>
+                                }
+                            </ul>
+                        }
+                                }
+                            </section>
+                        </div>
+                    }
+                    @*<div class="categoryImage"> <img src="@Url.Content("~/images/site/subcategory.jpg")" class="img-responsive" alt="img"> </div>*@
+                </aside><!--/.category-top-->
+
+                <header class="w100 productFilter clearfix">
+                    <div class="pull-left">
+                        <span class="search-filters-title">Foram encontradas @Model.Quantity ofertas</span>
+                    </div>
+                    <div class="pull-right container-select-order-wrapper">
+                        <div class="pull-right container-select-order">
+                            <!-- Doc do plugin utilizado: lcdsantos.github.io/jQuery-Selectric/ -->
+                            <select class="form-control selectric" name="selOrder" id="selOrder">
+                                <option selected="selected">Ordenar por:</option>
+                                <option name="relevancia" value="score">Relevancia</option>
+                                <option name="menor-maior" value="price-asc">Preço: Menor > Maior</option>
+                                <option name="maior-menor" value="price-desc">Preço: Maior > Menor</option>
+                                <option name="nome-az" value="name-asc">Nome: A > Z</option>
+                                <option name="nome-za" value="name-desc">Nome: Z > A</option>
+                                <option name="loja-az" value="store-asc">Loja: A > Z</option>
+                                <option name="loja-za" value="store-desc">Loja: Z > A</option>
+                                <option name="review" value="review-desc">Melhor avaliado</option>
+                                <option name="datalancamento-menor" value="launchdate-asc">Data: mais atual</option>
+                                <option name="datalancamento-maior" value="launchdate-desc">Data: mais antigo</option>
+                            </select>
+                        </div>
+                        <div class="change-view pull-right hidden-xs">
+                            <a href="#" title="Grid" class="grid-view"> <i class="fa fa-th-large"></i> </a>
+                            <a href="#" title="List" class="list-view "><i class="fa fa-th-list"></i></a>
+                        </div>
+                    </div>
+                </header> <!--/.productFilter-->
+                @Html.Partial("~/Views/Shared/Search/SearchProducts.cshtml")
+                <div class="clearfix"></div>
+                <div class="w100 categoryFooter">
+                    @Html.Partial("~/Views/Shared/Search/SearchPagination.cshtml", Model)
+                </div>
+            </article> <!--/.categoryFooter-->
+        }
+        else
+        {
+            @Html.Partial("~/Views/Shared/Search/SearchNoResults.cshtml")
+        }
+        </div><!--/right column end-->
+    </main><!-- /.row  -->
+
+
+    <aside class="comparador-wrapper w100">
+        <div class="container">
+            <section class="comparador-min-max-wrapper comparador-minimizar">
+                <span class="comparador-min-max">
+                    <span class="text-action">Minimizar</span>
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                </span>
+            </section>
+        </div>
+        <div class="container comparador-container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="title-home"> Comparação em @Model.SearchParameters.FreeSearch: </h2>
+                    <section class="comparar-products">
+                        <div class="row">
+                            <article class="item no-item no-item-selecione col-xs-3 col-sm-2">
+                                <div class="product box-model">
+                                    <div class="description comparador-description">
+                                        <h3 class="title"><a href="#">Selecione outro produto para comparar</a></h3>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="item col-xs-12 col-sm-4 comparador-text-wrapper pull-right">
+                                <div class="comparador-text">
+                                    <h4 class="title-text">Selecione os produtos que gostou, e faça uma comparação detalhada de todos eles!</h4>
+                                    <a class="btn btn-primary btn-pri btn-comparador tooltipOn" disabled href="#" data-toggle="tooltip" data-original-title="Compare os produtos selecionados">
+                                        Compare agora
+                                        <i class="glyphicon glyphicon-search">
+                                        </i>
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </aside>
+    @section Scripts {
+        <script>
+            $(document).ready(function(){
+                $('#selOrder').val('@Model.SelectedSort');
+                $('#selOrder').selectric('refresh');
+
+                $('.title-filter-preco').on('click', function () {
+                    var priceFrom = @Model.MinPrice.ToString("N2", culture).Replace(",", "");
+                    var priceTo = @Model.MaxPrice.ToString("N2", culture).Replace(",", "");
+                    var lastPrice = @Model.LastPrice.ToString("N2", culture).Replace(",", "");
+                    var qsLastPrice = qs("preco_de");
+
+                    if (qsLastPrice != null) lastPrice = qsLastPrice;
+                    if (priceFrom == priceTo) pricefrom = priceTo-10;
+                    $("#slider").editRangeSlider({
+                        bounds: { min: priceFrom, max: priceTo},
+                        defaultValues: { min: lastPrice, max: priceTo }
+                    },
+                    { step: 10 });
+                });
+            });
+        </script>
+    }
